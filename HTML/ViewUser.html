@@ -1,0 +1,1959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View User</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="../CSS/ViewUserCSS.css">
+
+    <ul class="nav">
+        <li><a href="../HTML/loginPage.html" style="color:#FF0066">Logout</a></li>
+        <li><a href="../WebPortal.html">Dogs</a></li>
+        <li><a href="../HTML/UsersPage.html">Users</a></li>
+    </ul>
+
+    <div>
+        <br><br>
+        <h2 class="Centred">Adoption Forms</h2>
+        <table id="tblAdoption">
+            <thead>
+                <th>Name of Animal</th>
+                <th></th>
+            </thead>
+            <tbody id="AdoptionBody">
+            </tbody>
+        </table>
+    </div>
+
+    <div>
+        <br><br>
+        <h2 class="Centred">Foster Forms</h2>
+        <table id="tblFoster">
+            <thead>
+                <th>Name of Animal</th>
+                <th></th>
+            </thead>
+            <tbody id="FosterBody">
+            </tbody>
+        </table>
+    </div>
+<div>
+    <!--top-->
+    <div id="Fur-AngelInformation" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+            <!--<button id="backBtn">Back</button>
+            <button id="showLabels" onclick = toggleLabels()>Show Labels</button>
+            <button id="showInfo" onclick =toggleBoxes()>Show Details</button>-->
+            <h1>Adoption Form</h1>
+        </div>
+        <!--Adoption-->
+    <div id="Fur-AngelInformation" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+            <label>Fur-Angel </label>
+        </div>
+        <div class="row">
+            <!--The Fur Angel Information-->
+            <div class="column">
+                <label class="labels" id="">First Choice:</label>
+                <label class="AnsLabel" id="LangelName1" style="display: none;"></label>
+                <input class="inputBoxes" id="angelName1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Animal Selection:</label>
+                <label class="AnsLabel" id="LAnimalSelection" style="display: none;"></label>
+                <input class="inputBoxes" id="animalSelection" type="text">
+            </div>
+            <div class="column">
+                
+
+            </div>
+           
+    </div>
+    <!--Client Information-->
+    <div id="Fur-AngelInformation" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+
+            <label>Client Details</label>
+
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label class="labels" id="">Client Name: </label>
+                <label class="AnsLabel" id="LAClientFullName" style="display:none;"></label>
+                <input class="inputBoxes" id="clientFullName" type="text">
+                
+            </div>
+            <div class="column">
+                <label class="labels" id="">Adress: </label>
+                <label class="AnsLabel" id="LAAdress" style="display: none;"></label>
+                <input class="inputBoxes" id="adress" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Contact Number:</label>
+                <label class="AnsLabel" id="LAContactNumber1" style="display: none;"></label>
+                <input class="inputBoxes" id="contactNumber1" type="text">
+            </div>
+            
+            <div class="column">
+                <label class="labels" id="">Contact Email Address:</label>
+                <label class="AnsLabel" id="LAEmailAddress1" style="display: none;"></label>
+                <input class="inputBoxes" id="emailAddress1" type="text">
+            </div>
+            
+            <div class="column">
+                <label class="labels" id="">ID Number:</label>
+                <label class="AnsLabel"id="LAIdNumbers" style="display: none;"></label>
+                <input class="inputBoxes" id="idNumbers" type="text">
+            </div>
+            <!--bool?-->
+            <div class="column">
+                <label class="labels" id="">Mailing List:</label>
+                <label class="AnsLabel" id="LAMailingList" style="display: none;"></label>
+                <input class="inputBoxes" id="mailingList" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Ages of Children:</label>
+                <label class="AnsLabel" id="LAAgesOfChildren" style="display: none;"></label>
+                <input class="inputBoxes" id="agesOfChildren" type="text">
+            </div>
+        </div>
+    </div>
+    <!--Home Details-->
+    <div id="HomeDetails" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+
+            <label>Home Details</label>
+
+
+        </div>
+
+        <div class="row">
+            <div class="column">
+              
+                <label class="labels" id="" >Other Animals: Cats:</label>
+                <label class="AnsLabel" id="LOtherAnimalsCats" style="display: none;"></label>
+                <input class="inputBoxes" id="otherAnimalsCats" type="text">
+            </div>
+            <div class="column">
+                
+                <label class="labels" id="" >Other Animals: Dogs:</label>
+                <label class="AnsLabel" id="LOtherAnimalsDogs" style="display: none;"></label>
+                <input class="inputBoxes" id="otherAnimalsDogs" type="text">
+            </div>
+            <div class="column">
+                
+                <label class="labels" id="" >Other Animals: Other:</label>
+                <label class="AnsLabel" id="LOtherAnimalsOther" style="display: none;"></label>
+                <input class="inputBoxes" id="otherAnimalsOther" type="text">
+            </div>
+            <div class="column">
+              
+                <label class="labels" id="" >Age of Other Animals: Cats:</label>
+                <label class="AnsLabel" id="LAgeOtherAnimalsCats" style="display: none;"></label>
+                <input class="inputBoxes" id="ageotherAnimalsCats" type="text">
+            </div>
+            <div class="column">
+                
+                <label class="labels" id="" >Age of Other Animals: Dogs:</label>
+                <label class="AnsLabel" id="LAgeOtherAnimalsDogs" style="display: none;"></label>
+                <input class="inputBoxes" id="ageotherAnimalsDogs" type="text">
+            </div>
+            <div class="column">
+                
+                <label class="labels" id="" >Age of Other Animals: Other:</label>
+                <label class="AnsLabel" id="LAgeOtherAnimalsOther" style="display: none;"></label>
+                <input class="inputBoxes" id="ageotherAnimalsOther" type="text">
+            </div>
+            <div class="column">
+              
+                <label class="labels" id="" >Gender of Other Animals: Cats:</label>
+                <label class="AnsLabel" id="LGenderOtherAnimalsCats" style="display: none;"></label>
+                <input class="inputBoxes" id="genderotherAnimalsCats" type="text">
+            </div>
+            <div class="column">
+                
+                <label class="labels" id="" >Gender of Other Animals: Dogs:</label>
+                <label class="AnsLabel" id="LGenderOtherAnimalsDogs" style="display: none;"></label>
+                <input class="inputBoxes" id="genderotherAnimalsDogs" type="text">
+            </div>
+            <div class="column">
+                
+                <label class="labels" id="" >Gender of Other Animals: Other:</label>
+                <label class="AnsLabel" id="LGenderOtherAnimalsOther" style="display: none;"></label>
+                <input class="inputBoxes" id="genderotherAnimalsOther" type="text">
+            </div>
+            <!--bool?-->
+            <div class="column">
+                <label class="labels" id=""  >Sterilized:</label>
+                <label  class="AnsLabel" id="LASterilized" style="display: none;"></label>
+                <input class="inputBoxes" id="sterilized" type="text">
+            </div>
+            <!--might change-->
+            <div class="column">
+                <label class="labels" id="" >Not Sterilized:</label>
+                <label class="AnsLabel" id="LAnotSterilized" style="display: none;"></label>
+                <input class="inputBoxes" id="notSterilized" type="text">
+            </div>
+            <div class="column">
+                <!--bool?-->
+                <label class="labels" id="" >Did animals have litter:</label>
+                <label class="AnsLabel" id="LAlitterbeforeSterilized" style="display: none;"></label>
+                <input class="inputBoxes" id="litterbeforeSterilized" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Vaccinated: </label>
+                <label class="AnsLabel" id="LAVaccinated" style="display: none;"></label>
+                <input class="inputBoxes" id="vaccinated" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Diet: </label>
+                <label class="AnsLabel" id="LAdiet" style="display: none;"></label>
+                <input class="inputBoxes" id="diet" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Quantity hours alone:</label>
+                <label class="AnsLabel" id="LAhoursAlone" style="display: none;"></label>
+                <input class="inputBoxes" id="hoursAlone" type="text">
+            </div>
+            <div class="column">
+
+                <label class="labels" id="" >Someone at home:</label>
+                <label class="AnsLabel" id="LASomeoneAtHome" style="display: none;"></label>
+                <input class="inputBoxes" id="someoneAtHome" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Adoption Reason: </label>
+                <label class="AnsLabel" id="LAAdoptionReason" style="display: none;"></label>
+                <input class="inputBoxes" id="adoptionReason" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Given away pet: </label>
+                <label class="AnsLabel" id="LAGivenPetAway" style="display: none;"></label>
+                <input class="inputBoxes" id="givenPetAway" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Previous Pet History:</label>
+                <label class="AnsLabel" id="LAPetHistory" style="display: none;"></label>
+                <input class="inputBoxes" id="petHistory" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Missing Pet:</label>
+                <label class="AnsLabel" id="LMissingPet" style="display: none;"></label>
+                <input class="inputBoxes" id="missingPet" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Prepared to Give permanent Home:</label>
+                <label class="AnsLabel" id="LpermanentHome" style="display: none;"></label>
+                <input class="inputBoxes" id="permanentHome" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Train Pet:</label>
+                <label class="AnsLabel" id="LtrainPet" style="display: none;"></label>
+                <input class="inputBoxes" id="trainPet" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Holiday Pet Care:</label>
+                <label class="AnsLabel" id="LholidayPetCare" style="display: none;"></label>
+                <input class="inputBoxes" id="holidayPetCare" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Circumstance change:</label>
+                <label class="AnsLabel" id="LCircumstancesChange" style="display: none;"></label>
+                <input class="inputBoxes" id="circumstancesChange" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Sleep Location:</label>
+                <label  class="AnsLabel" id="LALocation" style="display: none;"></label>
+                <input class="inputBoxes" id="location" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Shelter if Outside:</label>
+                <label class="AnsLabel" id="LShelterOutside" style="display: none;"></label>
+                <input class="inputBoxes" id="shelterOutside" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Pet Shelter:</label>
+                <label class="AnsLabel" id="LTimeInside" style="display: none;"></label>
+                <input class="inputBoxes" id="timeInside" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id=""  >Fenced/Gated:</label>
+                <label class="AnsLabel" id="LFencedOrGated" style="display: none;"></label>
+                <input class="inputBoxes" id="fencedOrGated" type="text">
+            </div>
+            <!--might change-->
+            <div class="column">
+                <label class="labels" id="" >Pool:</label>
+                <label class="AnsLabel" id="LPool" style="display: none;"></label>
+                <input class="inputBoxes" id="pool" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Feeding:</label>
+                <label class="AnsLabel" id="LFeeding" style="display: none;"></label>
+                <input class="inputBoxes" id="feeding" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Garden Size:</label>
+                <label class="AnsLabel" id="LGardenSize" style="display: none;"></label>
+                <input class="inputBoxes" id="gardenSize" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Time for pet:</label>
+                <label class="AnsLabel" id="LTimeForPet" style="display: none;"></label>
+                <input class="inputBoxes" id="timeForPet" type="text">
+            </div>
+            <div class="column">
+                <!--bool?-->
+                <label class="labels" id="" >Death on Premises:</label>
+                <label class="AnsLabel" id="LParvoOrDistemper" style="display: none;"></label>
+                <input class="inputBoxes" id="parvoOrDistemper" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Quality Care:</label>
+                <label class="AnsLabel" id="LQualityCare" style="display: none;"></label>
+                <input class="inputBoxes" id="qualityCare" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Type of Housing:</label>
+                <label class="AnsLabel" id="LTypeOfHousing" style="display: none;"></label>
+                <input class="inputBoxes" id="typeOfHousing" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Own or Rent:</label>
+                <label class="AnsLabel" id="LOwnOrRent" style="display: none;"></label>
+                <input class="inputBoxes" id="ownOrRent" type="text">
+            </div>
+            
+           
+        </div>
+    </div>
+    <!--Reference1-->
+    <div id="Reference1" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+
+            <label>Reference 1</label>
+
+
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="labels" id="" >Name:</label>
+                <label class="AnsLabel" id="LrefName1" style="display: none;"></label>
+                <input class="inputBoxes" id="refName1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Relationship:</label>
+                <label class="AnsLabel" id="LRefRelation1" style="display: none;"></label>
+                <input class="inputBoxes" id="refRelation1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Address:</label>
+                <label class="AnsLabel" id="LRefAdress1" style="display: none;"></label>
+                <input class="inputBoxes" id="refAdress1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Cell:</label>
+                <label class="AnsLabel" id="LCell1" style="display: none;"></label>
+                <input class="inputBoxes" id="refCell1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="">Landline:</label>
+                <label class="AnsLabel" id="LLandline1" style="display: none;"></label>
+                <input class="inputBoxes" id="refLandline1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="" >Email Address:</label>
+                <label class="AnsLabel" id="LREmail1" style="display: none;"></label>
+                <input class="inputBoxes" id="lRemail1" type="text">
+            </div>
+        </div>
+        <!--Reference2-->
+        <div id="Reference2" style="border: 2px solid black; text-align: center;">
+            <div class="row" id="FormHeaders">
+
+                <label>Reference 2</label>
+
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label class="labels" id="" >Name:</label>
+                    <label class="AnsLabel" id="LrefName2" style="display: none;"></label>
+                    <input class="inputBoxes" id="refName2" type="text">
+                </div>
+                <div class="column">
+                    <label class="labels" id="" >Relationship:</label>
+                    <label  class="AnsLabel" id="LRefRelation2" style="display: none;"></label>
+                    <input class="inputBoxes" id="refRelation2" type="text">
+                </div>
+                <div class="column">
+                    <label class="labels" id="" >Address:</label>
+                    <label class="AnsLabel" id="LRefAdress2" style="display: none;"></label>
+                    <input class="inputBoxes" id="refAdress2" type="text">
+                </div>
+                <div class="column">
+                    <label class="labels" id="">Cell:</label>
+                    <label class="AnsLabel" id="LCell2" style="display: none;"></label>
+                    <input class="inputBoxes" id="refCell2" type="text">
+                </div>
+                <div class="column">
+                    <label class="labels" id="">Landline:</label>
+                    <label class="AnsLabel" id="LLandline2" style="display: none;"></label>
+                    <input class="inputBoxes" id="refLandline2" type="text">
+                </div>
+                <div class="column">
+                    <label class="labels" id="" >Email Address:</label>
+                    <label class="AnsLabel" id="LREmail2" style="display: none;"></label>
+                    <input class="inputBoxes" id="lRemail2" type="text">
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div>
+
+<!--Foster Form///////////////////////////////////////////////////////////////////////////////////////////////////////-->
+    <div id="Fur-AngelInformation" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+            
+            <button id="btnEditAdoptConfirm" onclick="ConfirmEditAdopt" style="display: none;">Confirm Edit</button>
+    <button id="btnFosterClear" style="display: none;">Clear</button>
+           <!--<button id="backBtn">Back</button>
+            <button id="showLabels" onclick = toggleLabels()>Show Labels</button>
+            <button id="showInfo" onclick =toggleBoxes()>Show Details</button>-->
+            <h1>Foster Form</h1>
+        </div>
+    <div id="Fur-AngelInformation" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+            <label>Fur-Angel </label>
+        </div>
+        <div class="row">
+            <!--The Fur Angel Information-->
+            <div class="column">
+                <label class="labels" id="LAngelName" >Type of fur angel:</label>
+                <input class="inputBoxesFoster" id="angelNameF" type="text">
+                <label id="LAngelNameF" class="LabelsFoster"></label>
+            </div>
+            <!--<div class="column">
+                <label class="labels" id="LAngelGender" >Male/Female</label>
+                <input class="inputBoxesFoster" id="angelGender" type="text">
+                <label id="LAngelGenderF" class="LabelsFoster"></label>
+            </div>-->
+            <div class="column">
+                <label class="labels" id="LAngelSpecies" >Feline/Canine:</label>
+                <input class="inputBoxesFoster" id="angelSpeciesF" type="text">
+                <label id="LAngelSpeciesF" class="LabelsFoster"></label>
+            </div>
+            <div class="column">
+            </div>
+        </div>
+    </div>
+    <!--Client Information-->
+    <div id="Fur-AngelInformation" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+            <label>Client Details</label>
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label class="labels" id="LClientFullName" >Client Fullname:</label>
+                <input class="inputBoxesFoster" id="clientFullNameF" type="text">
+                <label id="LClientFullNameF" class="LabelsFoster"></label>
+            </div>
+            <div class="column">
+                <label class="labels" id="LAddress" >Address:</label>
+                <input class="inputBoxesFoster" id="addressF" type="text">
+                <label id="LAddressF" class="LabelsFoster"></label>
+            </div>
+            <div class="column">
+                <label class="labels" id="LContactNumber1" >Contact Number 1:</label>
+                <input class="inputBoxesFoster" id="contactNumber1F" type="text">
+                <label id="LContactNumber1F" class="LabelsFoster"></label>
+            </div>
+            <!--
+            <div class="column">
+                <label class="labels" id="LContactNumber2" >Contact Number 2</label>
+                <input class="inputBoxesFoster" id="contactNumber2" type="text">
+                <label id="LContactNumber2F" class="LabelsFoster"></label>
+            </div>-->
+            <div class="column">
+                <label class="labels" id="LEmailAddress1" >Contact Email Address 1:</label>
+                <input class="inputBoxesFoster" id="emailAddress1F" type="text">
+                <label id="LEmailAddress1F" class="LabelsFoster"></label>
+            </div>
+            <!--<div class="column">
+                <label class="labels" id="LEmailAddress2" >Contact Email Address 2</label>
+                <input class="inputBoxesFoster" id="emailAddress2" type="text">
+                <label id="LEmailAddress2F" class="LabelsFoster"></label>
+            </div>-->
+            <div class="column">
+                <label class="labels" id="LIdNumbers">ID Number/s:</label>
+                <input class="inputBoxesFoster" id="idNumbersF" type="text">
+                <label id="LIdNumbersF" class="LabelsFoster"></label>
+            </div><!--
+            <div class="column">
+                <label class="labels" id="LEnterNature">Nature</label>
+                <input class="inputBoxesFoster" id="enterNature" type="text">
+                <label id="LEnterNatureF" class="LabelsFoster"></label>
+            </div>-->
+            <!--bool?-->
+            <div class="column">
+                <label class="labels" id="LMailingList" >Mailing List:</label>
+                <input class="inputBoxesFoster" id="mailingListF" type="text">
+                <label id="LMailingListF" class="LabelsFoster"></label>
+            </div>
+            <div class="column">
+                <label class="labels" id="LAgesOfChildren" >Ages of Children:</label>
+                <input class="inputBoxesFoster" id="agesOfChildrenF" type="text">
+                <label id="LAgesOfChildrenF" class="LabelsFoster"></label>
+            </div>
+        </div>
+    </div>
+    <!--Home Details-->
+    <div id="HomeDetails" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+            <label>Home Details</label>
+        </div>
+        <div class="row">
+            <div class="column">
+                <!--other Animals might need more details-->
+                <label class="labels" id="LOtherAnimals" >Other Animals:</label>
+                <input class="inputBoxesFoster" id="otherAnimalsF" type="text">
+                <label id="LOtherAnimalsF" class="LabelsFoster"></label>
+            </div>
+            <!--bool?-->
+            <div class="column">
+                <label class="labels" id="LSterilized" >Sterilized:</label>
+                <input class="inputBoxesFoster" id="sterilizedF" type="text">
+                <label id="LSterilizedF" class="LabelsFoster"></label>
+            </div>
+            <!--might change-->
+            <div class="column">
+                <label class="labels" id="LNotSterilized" >Not Sterilized:</label>
+                <input class="inputBoxesFoster" id="notSterilizedF" type="text">
+                <label id="LNotSterilizedF" class="LabelsFoster"></label>
+            </div><!--
+            <div class="column">
+                bool
+                <label class="labels" id="LLitterbeforeSterilized" >Did animals have litter</label>
+                <input class="inputBoxesFoster" id="litterbeforeSterilizedF" type="text">
+                <label id="LLitterbeforeSterilizedF" class="LabelsFoster"></label>?
+            </div>-->
+            <div class="column">
+                <label  class="labels" id="LVaccinated">Vaccinated:</label>
+                <input class="inputBoxesFoster" id="vaccinatedF" type="text">
+                <label id="LVaccinatedF" class="LabelsFoster"></label>
+            </div>
+            <div class="column">
+                <label class="labels" id="LDiet" >Diet:</label>
+                <input class="inputBoxesFoster" id="dietF" type="text">
+                <label id="LDietF" class="LabelsFoster"></label>
+            </div>
+            <div class="column">
+                <label class="labels" id="LHoursAlone">Quantity hours alone:</label>
+                <input class="inputBoxesFoster" id="hoursAloneF" type="text">
+                <label id="LHoursAloneF" class="LabelsFoster"></label>
+            </div>
+            <div class="column">
+                <label class="labels" id="LSomeoneAtHome" >Someone at home:</label>
+                <input class="inputBoxesFoster" id="someoneAtHomeF" type="text">
+                <label id="LSomeoneAtHomeF" class="LabelsFoster"></label>
+            </div>
+            <!--
+            <div class="column">
+                <label class="labels" id="LAdoptionReason">Adoption Reason</label>
+                <input class="inputBoxesFoster" id="adoptionReason" type="text">
+                <label id="LAdoptionReasonF" class="LabelsFoster"></label>
+            </div>-->
+            <div class="column">
+                <label class="labels" id="LGivenPetAway" >Given away pet:</label>
+                <input class="inputBoxesFoster" id="givenPetAwayF" type="text">
+                <label id="LGivenPetAwayF" class="LabelsFoster"></label>
+            </div>
+            <div class="column">
+                <label class="labels" id="LPetHistory" >Previous Pet History:</label>
+                <input class="inputBoxesFoster" id="petHistoryF" type="text">
+                <label id="LPetHistoryF" class="LabelsFoster"></label>
+            </div>
+            <div class="column">
+                <label class="labels" id="LTypeOfFoster" >Type of Foster Offered:</label>
+                <input class="inputBoxesFoster" id="typeOfFosterF" type="text">
+                <label id="LTypeOfFosterF" class="LabelsFoster"></label>
+            </div>
+            
+        </div>
+    </div>
+    <button id="btnFosterConfirm" onclick="ConfirmEditFoster" style="display: none;">Confirm Edit</button>
+    <button id="btnFosterClear" style="display: none;">Clear</button>
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <script type="module">
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
+        import { getDatabase, set, get, update, remove, ref, child } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js"
+        import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-storage.js"
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBZoOVjRKGACWUvQpJA3UckRoyUk5gO86w",
+            authDomain: "fallenangels-app.firebaseapp.com",
+            databaseURL: "https://fallenangels-app-default-rtdb.firebaseio.com",
+            projectId: "fallenangels-app",
+            storageBucket: "fallenangels-app.appspot.com",
+            messagingSenderId: "249997131314",
+            appId: "1:249997131314:web:88c602c997d340a32a462b",
+            measurementId: "G-FC0WZTP5VR"
+        };
+
+        // Initialize Firebase Elements
+        firebase.initializeApp(firebaseConfig);
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase();
+       
+
+        //--- Code for when the user wants to upload a image to the database
+        /*
+        var enterBreed = document.querySelector("#enterBreed");
+        var enterDOB = document.querySelector("#enterDOB");
+        var enterGender = document.querySelector("#enterGender");
+        var enterHistory = document.querySelector("#enterHistory");
+        var enterIntake = document.querySelector("#enterIntake");
+        var enterName = document.querySelector("#enterName");
+        var enterNature = document.querySelector("#enterNature");
+        var enterSuit = document.querySelector("#enterSuit");
+        //User Input
+
+        //Finding Labels
+        var findID = document.querySelector("#findID");
+
+        var findBreed = document.querySelector("#findBreed");
+        var findDOB = document.querySelector("#findDOB");
+        var findGender = document.querySelector("#findGender");
+        var findHistory = document.querySelector("#findHistory");
+        var findIntake = document.querySelector("#findIntake");
+        var findName = document.querySelector("#findName");
+        var findNature = document.querySelector("#findNature");
+        var findPicture = document.querySelector("#findPicture");
+        var findSuit = document.querySelector("#findSuit");
+        //Finding Labels
+
+        // Showing the details on the labels before setting them to editing mode
+        var lBreed = document.querySelector("#lBreed");
+        var lDOB = document.querySelector("#lDOB");
+        var lGender = document.querySelector("#lGender");
+        var lHistory = document.querySelector("#lHistory");
+        var lIntake = document.querySelector("#lIntake");
+        var lName = document.querySelector("#lName");
+        var lNature = document.querySelector("#lNature");
+        var lSuit = document.querySelector("#lSuit");
+
+        //Buttons
+        var insertBtn = document.querySelector("#insert");
+        var updateBtn = document.querySelector("#update");
+        var clearBtn = document.querySelector("#clear");
+        var findBtn = document.querySelector("#find");
+        //Buttons
+
+        // Listeners that listen for CLICK events on the Website
+        //insertBtn.addEventListener('click', InsertData);
+        updateBtn.addEventListener('click', UpdateData);
+        clearBtn.addEventListener('click', ClearData);
+        //findBtn.addEventListener('click', FindData);
+        // Listeners that listen for CLICK events on the Website
+        */
+
+        var btnClearFoster = document.querySelector("#btnFosterClear");
+        btnClearFoster.addEventListener('click', ClearFoster)
+
+        document.onload = PopulateTables; // this happens as soon as the window loads
+        let iCount = 0; // this does not matter and can have for both as all they need is a unique id
+        const sFormsStr = 'Forms/' + localStorage.getItem('userID'); // this just shortens this
+
+        function uuid() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,
+
+                function (c) {
+                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                    return v.toString(16);
+                });
+        }
+        //All the functions that make the website work
+
+        function show() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+            //this gives id of tr whose button was clicked
+            var data =
+                document.getElementById(rowId);
+            //alert(rowId);
+            /*returns array of all elements with 
+            "row-data" class within the row with given id*/
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var name = deleted.slice(0, deleted.indexOf('<'));
+
+            //alert("ID: " + name);
+            showDetailsOnPage(name);
+        }
+
+        function showDetailsOnPage(findThisID) {
+            const dbref = ref(db);
+            get(child(dbref, "Dogs/" + findThisID))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        
+
+                        lBreed.innerHTML = snapshot.val().Breed;
+                        lDOB.innerHTML = snapshot.val().DOB;
+                        lGender.innerHTML = snapshot.val().Gender;
+                        lHistory.innerHTML = snapshot.val().History;
+                        myimg.src = snapshot.val().ImgURL;
+                        lIntake.innerHTML = snapshot.val().Intake;
+                        lName.innerHTML = snapshot.val().Name;
+                        lNature.innerHTML = snapshot.val().Nature;
+                        lSuit.innerHTML = snapshot.val().Suit;
+
+                        //Making the Editboxes invisable
+                        enterBreed.style = "display:none;";
+                        enterDOB.style = "display:none;";
+                        enterGender.style = "display:none;";
+                        enterHistory.style = "display:none;";
+                        enterIntake.style = "display:none;";
+                        enterName.style = "display:none;";
+                        enterNature.style = "display:none;";
+                        enterSuit.style = "display:none;";
+
+                        //Making the labels visible
+                        lBreed.style = "display:inline;";
+                        lDOB.style = "display:inline;";
+                        lGender.style = "display:inline;";
+                        lHistory.style = "display:inline;";
+                        lIntake.style = "display:inline;";
+                        lName.style = "display:inline;";
+                        lNature.style = "display:inline;";
+                        lSuit.style = "display:inline;";
+
+                        clearBtn.style = "display:inline;";
+                        insertBtn.style = "display:none;";
+                        updateBtn.style = "display:none;";
+                    }
+                    else {
+                        alert("No data found");
+                    }
+                })
+                .catch((error) => {
+                    alert(error)
+                })
+        }
+
+        // All The code for Updating
+        var sDogID;
+        var editBreed;
+        var editDOB;
+        var editGender;
+        var editHistory;
+        var editIntake;
+        var editName;
+        var editNature;
+        var editSuit;
+        var editImg;
+
+        function ShowDetailsForUpdate() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+            //this gives id of tr whose button was clicked
+            var data =
+                document.getElementById(rowId);
+            //alert(rowId);
+            /*returns array of all elements with 
+            "row-data" class within the row with given id*/
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var findThisID = deleted.slice(0, deleted.indexOf('<'));
+
+            const dbref = ref(db);
+            get(child(dbref, "Dogs/" + findThisID))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        sDogID = findThisID;
+
+                        editBreed = snapshot.val().Breed;
+                        editDOB = snapshot.val().DOB;
+                        editGender = snapshot.val().Gender;
+                        editHistory = snapshot.val().History;
+                        editIntake = snapshot.val().Intake;
+                        editName = snapshot.val().Name;
+                        editNature = snapshot.val().Nature;
+                        editSuit = snapshot.val().Suit;
+                        editImg = snapshot.val().ImgURL;
+
+                        enterBreed.value = editBreed;
+                        enterDOB.value = editDOB;
+                        enterGender.value = editGender;
+                        enterHistory.value = editHistory;
+                        enterIntake.value = editIntake;
+                        enterName.value = editName;
+                        enterNature.value = editNature;
+                        enterSuit.value = editSuit;
+                        myimg.src = editImg;
+
+                        //Making the Editboxes visable
+                        enterBreed.style = "display:inline;";
+                        enterDOB.style = "display:inline;";
+                        enterGender.style = "display:inline;";
+                        enterHistory.style = "display:inline;";
+                        enterIntake.style = "display:inline;";
+                        enterName.style = "display:inline;";
+                        enterNature.style = "display:inline;";
+                        enterSuit.style = "display:inline;";
+
+                        //Making the labels invisible
+                        lBreed.style = "display:none;";
+                        lDOB.style = "display:none;";
+                        lGender.style = "display:none;";
+                        lHistory.style = "display:none;";
+                        lIntake.style = "display:none;";
+                        lName.style = "display:none;";
+                        lNature.style = "display:none;";
+                        lSuit.style = "display:none;";
+
+                        clearBtn.style = "display:inline;";
+                        insertBtn.style = "display:none;";
+                        updateBtn.style = "display:inline;";
+                    }
+                    else {
+                        alert("No data found");
+                    }
+                })
+                .catch((error) => {
+                    alert(error)
+                })
+        }
+
+        function UpdateData() {
+            if (enterBreed.value == editBreed &&
+                enterDOB.value == editDOB &&
+                enterGender.value == editGender &&
+                enterHistory.value == editHistory &&
+                enterIntake.value == editIntake &&
+                enterName.value == editName &&
+                enterNature.value == editNature &&
+                enterSuit.value == editSuit &&
+                myimg.src == editImg) {
+                alert("The information is still the same");
+                return
+            }
+
+            update(ref(db, "Dogs/" + sDogID), {
+                Breed: enterBreed.value,
+                DOB: enterDOB.value,
+                Gender: enterGender.value,
+                History: enterHistory.value,
+                Intake: enterIntake.value,
+                Name: enterName.value,
+                Nature: enterNature.value,
+                Picture: enterPicture.value,
+                Suit: enterSuit.value
+            })
+                .then(() => {
+                    alert("Data updated successfully");
+                })
+                .catch((error) => {
+                    alert(error);
+                    return
+                });
+            window.location.reload();
+        }
+
+        function DeleteDetails() {
+            if (!confirm("Are you sure you want to delete this record?")) { return }
+
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+            //this gives id of tr whose button was clicked
+            var data =
+                document.getElementById(rowId);
+            //alert(rowId);
+            /*returns array of all elements with 
+            "row-data" class within the row with given id*/
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var idToDelete = deleted.slice(0, deleted.indexOf('<'));
+
+            remove(ref(db, "Dogs/" + idToDelete))
+                .then(() => {
+                    alert("Data deleted successfully");
+                })
+                .catch((error) => {
+                    alert(error);
+                    return;
+                });
+            window.location.reload();
+        }
+
+        function ClearData() {
+            //Making the Editboxes visable
+            enterBreed.style = "display:inline;";
+            enterDOB.style = "display:inline;";
+            enterGender.style = "display:inline;";
+            enterHistory.style = "display:inline;";
+            enterIntake.style = "display:inline;";
+            enterName.style = "display:inline;";
+            enterNature.style = "display:inline;";
+            enterSuit.style = "display:inline;";
+
+            //Making the labels invisible
+            lBreed.style = "display:none;";
+            lDOB.style = "display:none;";
+            lGender.style = "display:none;";
+            lHistory.style = "display:none;";
+            lIntake.style = "display:none;";
+            lName.style = "display:none;";
+            lNature.style = "display:none;";
+            lSuit.style = "display:none;";
+
+            enterBreed.value = "";
+            enterDOB.value = "";
+            enterGender.value = "";
+            enterHistory.value = "";
+            enterIntake.value = "";
+            enterName.value = "";
+            enterNature.value = "";
+            enterSuit.value = "";
+            myimg.src = "";
+
+            sDogID = "";
+
+            clearBtn.style = "display:none;";
+            insertBtn.style = "display:inline;";
+            updateBtn.style = "display:none;";
+        }
+        // ------------ Functions that will load data into the |Angels Table| from the Realtime Database
+
+        // ------------ Functions that will load data into the |Users Table| from the Realtime Database
+        window.onload = PopulateTables;
+
+        function PopulateTables() {
+            firebase.database().ref(sFormsStr + '/AdoptionForms').once('value',
+                function (AllRecords) {
+                    AllRecords.forEach(
+                        function (CurrentRecord) {
+                            var first = CurrentRecord.val().pg1_animalName;
+                            var aId = CurrentRecord.val().formID;
+                            AddToAdoption(first, aId);
+                        });
+                });
+               
+                firebase.database().ref(sFormsStr + '/FosterForms').once('value',
+                function (AllRecords) {
+                    AllRecords.forEach(
+                        function (CurrentRecord) {
+                            var first = CurrentRecord.val().pg1_animalName;
+                            var fId = CurrentRecord.val().formID;
+                            AddToFoster(first, fId);
+                        });
+                });/**/
+                document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        //Filling the rows up
+        function AddToAdoption(first, aId) {
+            var tbody = document.querySelector('#AdoptionBody');
+            var trow = document.createElement('tr');
+            var tdID = document.createElement('td');
+            var tdName = document.createElement('td');
+
+            var tdEditBtn = document.createElement('td');
+            var tdUpdateBtn = document.createElement('td');
+            var tdRemoveBtn = document.createElement('td');
+
+            var btnEdit = document.createElement('button');
+            var btnUpdate = document.createElement('button2');
+            var btnRemove = document.createElement('button3');
+
+            btnEdit.textContent = "View";
+            btnUpdate.textContent = "Edit";
+            btnRemove.textContent = "Remove";
+
+            btnEdit.addEventListener('click', ViewAdoption);
+            btnUpdate.addEventListener('click', EditAdoption);
+            btnRemove.addEventListener('click', RemoveAdoption);
+
+            tdEditBtn.appendChild(btnEdit);
+            tdUpdateBtn.appendChild(btnUpdate);
+            tdRemoveBtn.appendChild(btnRemove);
+
+            tdID.innerHTML = aId;
+            tdName.innerHTML = first;
+
+            tdID.style = "display:none;";
+
+            var count = Number(iCount);
+            trow.id = "AdoptionRowNo" + count.toString();
+            //tbody.innerHTML ="<input type='button' id='foo+i' value='Hello'>";
+            count++;
+            iCount = count;
+
+            trow.appendChild(tdID);
+            trow.appendChild(tdName);
+            trow.appendChild(tdEditBtn);
+            trow.appendChild(tdUpdateBtn);
+            trow.appendChild(tdRemoveBtn);
+
+            tbody.appendChild(trow);
+        }
+
+        function AddToFoster(first, fId) {
+            var tbody = document.querySelector('#FosterBody');
+            var trow = document.createElement('tr');
+            var tdID = document.createElement('td');
+            var tdName = document.createElement('td');
+
+            var tdEditBtn = document.createElement('td');
+            var tdUpdateBtn = document.createElement('td');
+            var tdRemoveBtn = document.createElement('td');
+
+            var btnEdit = document.createElement('button');
+            var btnUpdate = document.createElement('button2');
+            var btnRemove = document.createElement('button3');
+
+            btnEdit.textContent = "View";
+            btnUpdate.textContent = "Edit";
+            btnRemove.textContent = "Remove";
+
+            btnEdit.addEventListener('click', ViewFoster);
+            btnUpdate.addEventListener('click', EditFoster);
+            btnRemove.addEventListener('click', RemoveFoster);
+
+            tdEditBtn.appendChild(btnEdit);
+            tdUpdateBtn.appendChild(btnUpdate);
+            tdRemoveBtn.appendChild(btnRemove);
+
+            tdID.innerHTML = fId;
+            tdName.innerHTML = first;
+
+            tdID.style = "display:none;";
+
+            var count = Number(iCount);
+            trow.id = "FosterRowNo" + count.toString();
+            //tbody.innerHTML ="<input type='button' id='foo+i' value='Hello'>";
+            count++;
+            iCount = count;
+
+            trow.appendChild(tdID);
+            trow.appendChild(tdName);
+            trow.appendChild(tdEditBtn);
+            trow.appendChild(tdUpdateBtn);
+            trow.appendChild(tdRemoveBtn);
+
+            tbody.appendChild(trow);
+        }
+
+        function ShowDetailsForUser() {
+            //window.location.href = '';
+            alert("SHOW ME THE MONEY");
+        }
+
+        function ShowHomeCheck() {
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+            //this gives id of tr whose button was clicked
+            var data =
+                document.getElementById(rowId);
+            //alert(rowId);
+            /*returns array of all elements with 
+            "row-data" class within the row with given id*/
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var findThisID = deleted.slice(0, deleted.indexOf('<'));
+            localStorage.setItem('userID', findThisID);
+            window.location.href = '../HTML/homeCheck.html';
+        }
+
+        function PopulateViewAdoption(sFindThisID){
+            const dbref = ref(db);
+            get(child(dbref, sFormsStr + "/AdoptionForms/" + sFindThisID))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        //Angel details
+                        LangelName1.innerHTML = snapshot.val().pg1_animalName;
+                        LAnimalSelection.innerHTML = snapshot.val().pg1_animalSelection;
+                      
+                        //Client details
+                        LAClientFullName.innerHTML = snapshot.val().pg1_ownerNameAndSurname;
+                        LAAdress.innerHTML = snapshot.val().pg1_ownerAddress;
+                        LAContactNumber1.innerHTML = snapshot.val().pg2_ownerContactNumber;
+                        LAEmailAddress1.innerHTML = snapshot.val().pg2_ownerEmail;
+                        LAIdNumbers.innerHTML = snapshot.val().pg2_ownerIDNumber;
+                        LAMailingList.innerHTML = snapshot.val().pg2_ownerAddToMailingList;
+                        LAAgesOfChildren.innerHTML = snapshot.val().pg2_childrenAges;
+                        //Living condition
+                        LOtherAnimalsCats.innerHTML = snapshot.val().pg2_otherAnimal_Dogs;  
+                        LOtherAnimalsDogs.innerHTML = snapshot.val().pg2_otherAnimal_Cats;  
+                        LOtherAnimalsOther.innerHTML = snapshot.val().pg2_otherAnimal_Other; 
+                         
+                        LAgeOtherAnimalsCats.innerHTML = snapshot.val().pg3_ageOfOtherAnimals_Cats;  
+                        LAgeOtherAnimalsDogs.innerHTML = snapshot.val().pg3_ageOfOtherAnimals_Dogs;  
+                        LAgeOtherAnimalsOther.innerHTML = snapshot.val().pg3_ageOfOtherAnimals_Others;  
+                        LGenderOtherAnimalsCats.innerHTML = snapshot.val().pg3_genderOfOtherAnimals_Cats;  
+                        LGenderOtherAnimalsDogs.innerHTML = snapshot.val().pg3_genderOfOtherAnimals_Dogs;  
+                        LGenderOtherAnimalsOther.innerHTML = snapshot.val().pg3_genderOfOtherAnimals_Others;  
+                        LASterilized.innerHTML = snapshot.val().pg3_animalsSterilised;
+                        LAnotSterilized.innerHTML = snapshot.val().pg3_animals_Not_Sterilised;
+                        LAlitterbeforeSterilized.innerHTML = snapshot.val().pg4_litterBeforeSterilisation;
+                        LAVaccinated.innerHTML = snapshot.val().pg4_reasonForNonSterilisation;
+                        LAdiet.innerHTML = snapshot.val().pg4_petsDiet;
+                        LAhoursAlone.innerHTML = snapshot.val().pg4_hoursAlone;
+                        LASomeoneAtHome.innerHTML = snapshot.val().pg5_hoursTogether;
+                        LAAdoptionReason.innerHTML = snapshot.val().pg5_reasonForAdoption;
+                        LAGivenPetAway.innerHTML = snapshot.val().pg5_animalSurrender_Reason;
+                        LAPetHistory.innerHTML = snapshot.val().pg5_animalSurrender_Status;
+                        LMissingPet.innerHTML = snapshot.val().pg5_havePetsGoneMissing;
+                        LpermanentHome.innerHTML = snapshot.val().pg6_permanentHome;
+                        LtrainPet.innerHTML = snapshot.val().pg6_teachingWillingness;
+                        LholidayPetCare.innerHTML = snapshot.val().pg6_petResponsibility_whenOnHoliday;
+                        LCircumstancesChange.innerHTML = snapshot.val().pg6_onCircumstanceChange;
+                        LALocation.innerHTML = snapshot.val().pg6_petSleepingSituation;
+                        LShelterOutside.innerHTML = snapshot.val().pg7_petOutsideShelter;
+                        //wrong
+                        LTimeInside.innerHTML = snapshot.val().pg7_petInsideOutside;
+                        LFencedOrGated.innerHTML = snapshot.val().pg7_yardStatus;
+                        LPool.innerHTML = snapshot.val().pg7_poolFencing;
+                        LFeeding.innerHTML = snapshot.val().pg7_numberOfFeedings;
+                        LGardenSize.innerHTML = snapshot.val().pg8_yardSize;
+                        LTimeForPet.innerHTML = snapshot.val().pg8_petExtraActivities;
+                        LParvoOrDistemper.innerHTML = snapshot.val().pg8_deathsOnPremises;
+                        LQualityCare.innerHTML = snapshot.val().pg8_providePetCare;
+                        LTypeOfHousing.innerHTML = snapshot.val().pg8_typeOfHousing;
+                        LOwnOrRent.innerHTML = snapshot.val().pg9_ownOrRent;
+                        
+                        LDiet.innerHTML = snapshot.val().pg4_petsDiet;
+                       
+                        //Reference 1
+                        LrefName1.innerHTML = snapshot.val().pg10_referanceOneName;
+                        LRefRelation1.innerHTML = snapshot.val().pg10_referanceOneRelationship;
+                        LRefAdress1.innerHTML = snapshot.val().pg10_referanceOneAddress;
+                        LCell1.innerHTML=snapshot.val().pg10_referanceOneCell;
+                        LLandline1.innerHTML = snapshot.val().pg10_referanceOneLandline;
+                        LREmail1.innerHTML =snapshot.val().pg10_referanceOneEmail;
+                       //Reference 2
+                       LrefName2.innerHTML = snapshot.val().pg11_referanceTwoName;
+                       LRefRelation2.innerHTML = snapshot.val().pg11_referanceTwoRelationship;
+                       LRefAdress2.innerHTML = snapshot.val().pg11_referanceTwoAddress;
+                       
+                       LCell2.innerHTML=snapshot.val().pg11_referanceTwoCell;
+                        LLandline2.innerHTML = snapshot.val().pg10_referanceTwoLandline;
+                        LREmail2.innerHTML =snapshot.val().pg10_referanceTwoEmail;
+
+                        const answers = document.getElementsByClassName("AnsLabel");
+                        const inpBoxes = document.getElementsByClassName("inputBoxes");
+                        for (let i = 0; i < answers.length; i++) 
+                        {
+                            answers[i].style = "display: inline;";
+                            inpBoxes[i].style="display: none";
+                        }
+
+                        
+                    }
+                    else {
+                        alert("No data found");
+                    }
+                })
+                .catch((error) => {
+                    alert(error)
+                })
+
+        }
+
+        function ViewAdoption() {
+
+            //alert('NOT CODED YET');
+
+            document.body.scrollTop = 400; // For Safari
+            document.documentElement.scrollTop = 400; // For Chrome, Firefox, IE and Opera
+
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+            //this gives id of tr whose button was clicked
+            var data =
+                document.getElementById(rowId);
+            //alert(rowId);
+            /*returns array of all elements with 
+            "row-data" class within the row with given id*/
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var name = deleted.slice(0, deleted.indexOf('<'));
+
+            //alert("ID: " + name);
+            //showDetailsOnPage(name);
+            
+            /*const dbref = ref(db);
+            get(child(dbref, sFormsStr + "AdoptionForms/"))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        
+                    }
+                }
+                ); */
+                //alert(name);
+                PopulateViewAdoption(name);
+
+        }
+        
+         //Variables for edit Adopt
+        var AngelNameA;
+        var AngelSelectA;
+        var ClientNameA;
+        var ClientContactNumA;
+        var EmailAddressA;
+        var idNumbersA;
+        var MailingListA;
+        var AgeOfChildrenA;
+        var OtherAnimalsCatsA;
+        var OtherAnimalsDogsA;
+        var OtherAnimalsOtherA;
+
+        var GendOtherAnimalsCatsA;
+        var GendOtherAnimalsDogsA;
+        var GendOtherAnimalsOtherA;
+
+        var AgeOtherAnimalsCatsA;
+        var AgeOtherAnimalsDogsA;
+        var AgeOtherAnimalsOtherA;
+        var SterilizedA;
+        var NotSterilizedA;
+        var AnimalLitterA;
+        var VaccinatedA;
+        var DietA;
+        var QuantityHourAloneA;
+        var SomeOneHomeA;
+        var AdoptReasonA;
+        var GivenAwayA;
+        var PetHistoryA;
+        var MissingPetA;
+        var GivePermanentHomeA;
+        var TrainPetA;
+        var HolidayPetCareA;
+        var CicumstancechangeA;
+        var SleepLocA;
+        var ShelterifOutsideA;
+        var PetShelterA;
+        var FencedOrGatedA;
+        var PoolA;
+        var FeedingA;
+        var GardenSizeA;
+        var TimeForPetA;
+        var DeathOnPremA;
+        var QualityCareA;
+        var TypeOfHousingA;
+        var OwnOrRentA;
+       
+        var RefName1A;
+        var RefRelation1A;
+        var RefAdress1A;
+        var RefCell1A;
+        var RefLandline1A;
+        var RefEmail1A;
+
+        var RefName2A;
+        var RefRelation2A;
+        var RefAdress2A;
+        var RefCell2A;
+        var RefLandline2A;
+        var RefEmail2A;
+
+         
+
+
+        
+        function EditAdoption() {
+           //alert('NOT CODED YET');
+          // document.body.scrollTop = 1200; // For Safari
+            //document.documentElement.scrollTop = 1200; // For Chrome, Firefox, IE and Opera
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+           
+            var data =
+                document.getElementById(rowId);
+        
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var sFindID = deleted.slice(0, deleted.indexOf('<'));
+
+
+            const dbref = ref(db);
+            get(child(dbref, sFormsStr + "/AdoptionForms/" + sFindID))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        angelName1.value = snapshot.val().pg1_animalName;
+                        animalSelection.value = snapshot.val().pg1_animalSelection;
+                
+                        //Client details
+                        clientFullName.value = snapshot.val().pg1_ownerNameAndSurname;
+                        adress.value = snapshot.val().pg1_ownerAddress;
+                        contactNumber1.value = snapshot.val().pg2_ownerContactNumber;
+                        emailAddress1.value = snapshot.val().pg2_ownerEmail;
+                        idNumbers.value = snapshot.val().pg2_ownerIDNumber;
+                        mailingList.value = snapshot.val().pg2_ownerAddToMailingList;
+                        agesOfChildren.value = snapshot.val().pg2_childrenAges;
+                        //Living condition
+                        otherAnimalsCats.value = snapshot.val().pg2_otherAnimal_Dogs;  
+                        otherAnimalsDogs.value = snapshot.val().pg2_otherAnimal_Cats;  
+                        otherAnimalsOther.value = snapshot.val().pg2_otherAnimal_Other; 
+                         
+                        ageotherAnimalsCats.value = snapshot.val().pg3_ageOfOtherAnimals_Cats;  
+                        ageotherAnimalsDogs.value = snapshot.val().pg3_ageOfOtherAnimals_Dogs;  
+                        ageotherAnimalsOther.value = snapshot.val().pg3_ageOfOtherAnimals_Others;  
+                        genderotherAnimalsCats.value = snapshot.val().pg3_genderOfOtherAnimals_Cats;  
+                        genderotherAnimalsDogs.value = snapshot.val().pg3_genderOfOtherAnimals_Dogs;  
+                        genderotherAnimalsOther.value = snapshot.val().pg3_genderOfOtherAnimals_Others;  
+                        sterilized.value = snapshot.val().pg3_animalsSterilised;
+                        notSterilized.value = snapshot.val().pg3_animals_Not_Sterilised;
+                        litterbeforeSterilized.value = snapshot.val().pg4_litterBeforeSterilisation;
+                        vaccinated.value = snapshot.val().pg4_reasonForNonSterilisation;
+                        diet.value = snapshot.val().pg4_petsDiet;
+                        hoursAlone.value = snapshot.val().pg4_hoursAlone;
+                        someoneAtHome.value = snapshot.val().pg5_hoursTogether;
+                        adoptionReason.value = snapshot.val().pg5_reasonForAdoption;
+                        givenPetAway.value = snapshot.val().pg5_animalSurrender_Reason;
+                        petHistory.value = snapshot.val().pg5_animalSurrender_Status;
+                        missingPet.value = snapshot.val().pg5_havePetsGoneMissing;
+                        permanentHome.value = snapshot.val().pg6_permanentHome;
+                        trainPet.value = snapshot.val().pg6_teachingWillingness;
+                        holidayPetCare.value = snapshot.val().pg6_petResponsibility_whenOnHoliday;
+                        circumstancesChange.value = snapshot.val().pg6_onCircumstanceChange;
+                        location.value = snapshot.val().pg6_petSleepingSituation;
+                        shelterOutside.value = snapshot.val().pg7_petOutsideShelter;
+                        //wrong
+                        timeInside.value = snapshot.val().pg7_petInsideOutside;
+                        fencedOrGated.value = snapshot.val().pg7_yardStatus;
+                        pool.value = snapshot.val().pg7_poolFencing;
+                        feeding.value = snapshot.val().pg7_numberOfFeedings;
+                        gardenSize.value = snapshot.val().pg8_yardSize;
+                        timeForPet.value = snapshot.val().pg8_petExtraActivities;
+                        parvoOrDistemper.value = snapshot.val().pg8_deathsOnPremises;
+                        qualityCare.value = snapshot.val().pg8_providePetCare;
+                        typeOfHousing.value = snapshot.val().pg8_typeOfHousing;
+                        ownOrRent.value = snapshot.val().pg9_ownOrRent;
+                        diet.value = snapshot.val().pg4_petsDiet;
+                        //Reference 1
+                        refName1.value = snapshot.val().pg10_referanceOneName;
+                        refRelation1.value = snapshot.val().pg10_referanceOneRelationship;
+                        refAdress1.value = snapshot.val().pg10_referanceOneAddress;
+                        refCell1.value=snapshot.val().pg10_referanceOneCell;
+                        refLandline1.value = snapshot.val().pg10_referanceOneLandline;
+                        lRemail1.value =snapshot.val().pg10_referanceOneEmail;
+                       //Reference 2
+                       refName2.value = snapshot.val().pg11_referanceTwoName;
+                       refRelation2.value = snapshot.val().pg11_referanceTwoRelationship;
+                       refAdress2.value = snapshot.val().pg11_referanceTwoAddress;
+                       
+                       refCell2.value=snapshot.val().pg11_referanceTwoCell;
+                        refLandline2.value = snapshot.val().pg10_referanceTwoLandline;
+                        lRemail2.innerHTML =snapshot.val().pg10_referanceTwoEmail;
+                        
+                       
+                        const answersAdopt = document.getElementsByClassName("AnsLabel");
+                        const inpBoxesAdopt = document.getElementsByClassName("inputBoxes");
+                        for (let i = 0; i < answersAdopt.length; i++) 
+                        {
+                            answersAdopt[i].style = "display: none;";
+                            inpBoxesAdopt[i].style="display: inline";
+                        }
+                    }
+                    else {
+                        alert("No data found");
+                    }
+                })
+                .catch((error) => {
+                    alert(error)
+                })   
+        }
+function ConfirmEditAdopt()
+{
+    if (!confirm("Confirm Edit of this Record?")) { return }
+     AngelNameA;
+         AngelSelectA;
+         ClientNameA;
+         ClientContactNumA;
+         EmailAddressA;
+         idNumbersA;
+         MailingListA;
+         AgeOfChildrenA;
+         OtherAnimalsCatsA;
+         OtherAnimalsDogsA;
+         OtherAnimalsOtherA;
+
+         GendOtherAnimalsCatsA;
+         GendOtherAnimalsDogsA;
+         GendOtherAnimalsOtherA;
+
+         AgeOtherAnimalsCatsA;
+         AgeOtherAnimalsDogsA;
+         AgeOtherAnimalsOtherA;
+         SterilizedA;
+         NotSterilizedA;
+         AnimalLitterA;
+         VaccinatedA;
+         DietA;
+         QuantityHourAloneA;
+         SomeOneHomeA;
+         AdoptReasonA;
+         GivenAwayA;
+         PetHistoryA;
+         MissingPetA;
+         GivePermanentHomeA;
+         TrainPetA;
+         HolidayPetCareA;
+         CicumstancechangeA;
+         SleepLocA;
+         ShelterifOutsideA;
+         PetShelterA;
+         FencedOrGatedA;
+         PoolA;
+         FeedingA;
+         GardenSizeA;
+         TimeForPetA;
+         DeathOnPremA;
+         QualityCareA;
+         TypeOfHousingA;
+         OwnOrRentA;
+       
+         RefName1A;
+         RefRelation1A;
+         RefAdress1A;
+         RefCell1A;
+         RefLandline1A;
+         RefEmail1A;
+
+         
+            //alert("Are you sure you want to edit this one?");
+            angelName1.value = snapshot.val().pg1_animalName;
+                        animalSelection.value == pg1_animalSelection;
+                
+                        //Client details
+                        clientFullName.value == pg1_ownerNameAndSurname;
+                        adress.value == pg1_ownerAddress;
+                        contactNumber1.value == pg2_ownerContactNumber;
+                        emailAddress1.value == pg2_ownerEmail;
+                        idNumbers.value == pg2_ownerIDNumber;
+                        mailingList.value == pg2_ownerAddToMailingList;
+                        agesOfChildren.value == pg2_childrenAges;
+                        //Living condition
+                        otherAnimalsCats.value == pg2_otherAnimal_Dogs;  
+                        otherAnimalsDogs.value == pg2_otherAnimal_Cats;  
+                        otherAnimalsOther.value == pg2_otherAnimal_Other; 
+                         
+                        ageotherAnimalsCats.value == pg3_ageOfOtherAnimals_Cats;  
+                        ageotherAnimalsDogs.value == pg3_ageOfOtherAnimals_Dogs;  
+                        ageotherAnimalsOther.value == pg3_ageOfOtherAnimals_Others;  
+                        genderotherAnimalsCats.value == pg3_genderOfOtherAnimals_Cats;  
+                        genderotherAnimalsDogs.value == pg3_genderOfOtherAnimals_Dogs;  
+                        genderotherAnimalsOther.value == pg3_genderOfOtherAnimals_Others;  
+                        sterilized.value == pg3_animalsSterilised;
+                        notSterilized.value == pg3_animals_Not_Sterilised;
+                        litterbeforeSterilized.value == pg4_litterBeforeSterilisation;
+                        vaccinated.value == pg4_reasonForNonSterilisation;
+                        diet.value == pg4_petsDiet;
+                        hoursAlone.value == pg4_hoursAlone;
+                        someoneAtHome.value == pg5_hoursTogether;
+                        adoptionReason.value == pg5_reasonForAdoption;
+                        givenPetAway.value == pg5_animalSurrender_Reason;
+                        petHistory.value == pg5_animalSurrender_Status;
+                        missingPet.value == pg5_havePetsGoneMissing;
+                        permanentHome.value == pg6_permanentHome;
+                        trainPet.value == pg6_teachingWillingness;
+                        holidayPetCare.value == pg6_petResponsibility_whenOnHoliday;
+                        circumstancesChange.value == pg6_onCircumstanceChange;
+                        location.value == pg6_petSleepingSituation;
+                        shelterOutside.value == pg7_petOutsideShelter;
+                        //wrong
+                        timeInside.value == pg7_petInsideOutside;
+                        fencedOrGated.value == pg7_yardStatus;
+                        pool.value == pg7_poolFencing;
+                        feeding.value == pg7_numberOfFeedings;
+                        gardenSize.value == pg8_yardSize;
+                        timeForPet.value == pg8_petExtraActivities;
+                        parvoOrDistemper.value == pg8_deathsOnPremises;
+                        qualityCare.value == pg8_providePetCare;
+                        typeOfHousing.value == pg8_typeOfHousing;
+                        ownOrRent.value == pg9_ownOrRent;
+                        diet.value == pg4_petsDiet;
+                        //Reference 1
+                        refName1.value == pg10_referanceOneName;
+                        refRelation1.value == pg10_referanceOneRelationship;
+                        refAdress1.value == pg10_referanceOneAddress;
+                        refCell1.value==pg10_referanceOneCell;
+                        refLandline1.value == pg10_referanceOneLandline;
+                        lRemail1.value ==pg10_referanceOneEmail;
+                       //Reference 2
+                       refName2.value == RefName2A;
+                       refRelation2.value ==  RefRelation2A;
+                       refAdress2.value == RefAdress2A;
+                       refCell2.value==   RefCell2A;
+                        refLandline2.value == RefLandline2A;
+                        lRemail2.innerHTML == RefEmail2A;
+            if (angelNameF.value == editangelNameF &&
+                angelSpeciesF.value == editangelSpeciesF &&
+                clientFullNameF.value == editclientFullNameF &&
+                addressF.value == editaddressF &&
+                contactNumber1F.value == editcontactNumber1F &&
+                emailAddress1F.value == editemailAddress1F &&
+                idNumbersF.value == editidNumbersF &&
+                mailingListF.value == editmailingListF &&
+                agesOfChildrenF.value == editagesOfChildrenF &&
+                otherAnimalsF.value == editotherAnimalsF &&
+                sterilizedF.value == editsterilizedF &&
+                notSterilizedF.value == editnotSterilizedF &&
+                vaccinatedF.value == editvaccinatedF &&
+                dietF.value == editdietF &&
+                hoursAloneF.value == edithoursAloneF &&
+                someoneAtHomeF.value == editsomeoneAtHomeF &&
+                givenPetAwayF.value == editgivenPetAwayF &&
+                petHistoryF.value == editpetHistoryF &&
+                typeOfFosterF.value == edittypeOfFosterF) {
+                alert("The information is still the same");
+                return
+
+}
+}
+        function RemoveAdoption() {
+            clientFullName.value = "";
+                        adress.value = "";
+                        contactNumber1.value = "";
+                        emailAddress1.value = "";
+                        idNumbers.value = "";
+                        mailingList.value = "";
+                        agesOfChildren.value = "";
+                        //Living conditio                       otherAnimalsCats.value = "";pg2_erAnimal_Dogs  
+                        otherAnimalsDogs.value = "";  
+                        otherAnimalsOther.value = ""; 
+                         ageotherAnimalsCats.value = "";  
+                        ageotherAnimalsDogs.value = "";  
+                        ageotherAnimalsOther.value = "";  
+                        genderotherAnimalsCats.value = "";  
+                        genderotherAnimalsDogs.value = "";  
+                        genderotherAnimalsOther.value = "";  
+                        sterilized.value = "";
+                        notSterilized.value = "";
+                        litterbeforeSterilized.value = "";
+                        vaccinated.value = "";
+                        diet.value = "";
+                        hoursAlone.value = "";
+                        someoneAtHome.value = "";
+                        adoptionReason.value = "";
+                        givenPetAway.value = "";
+                        petHistory.value = "";
+                        missingPet.value = "";
+                        permanentHome.value = "";
+                        trainPet.value = "";
+                        holidayPetCare.value = "";
+                        circumstancesChange.value = "";
+                        location.value = "";
+                        shelterOutside.value = "";
+                        //wrong
+                        timeInside.value = "";
+                        fencedOrGated.value =
+                        pool.value = "";
+                        feeding.value = "";
+                        gardenSize.value = "";
+                        timeForPet.value = "";
+                        parvoOrDistemper.value =
+                        qualityCare.value = "";
+                        typeOfHousing.value = "";
+                        ownOrRent.value = "";
+                        diet.value = "";
+                        //Reference 1
+                        refName1.value = "";
+                        refRelation1.value =
+                        refAdress1.value = "";
+                        refCell1.value=pg=
+                        refLandline1.value =
+                        lRemail1.value =
+                       //Reference 2
+                       refName2.value = "";
+                       refRelation2.value = ""; 
+                       refAdress2.value = "";
+                       refCell2.value= "";  
+                        refLandline2.value = "";
+                        lRemail2.innerHTML = "";
+            
+            btnFosterConfirm.style="display:none;";
+            btnFosterClear.style="display:none;";
+            const answers = document.getElementsByClassName("LabelsFoster");
+            const inpBoxes = document.getElementsByClassName("inputBoxesFoster");
+            for (let i = 0; i < answers.length; i++) 
+            {
+                answers[i].style = "display: none;";
+                inpBoxes[i].style="display: inline";
+            }
+        }
+
+        function ViewFoster() {
+            //alert('NOT CODED YET');
+            document.body.scrollTop = 1200; // For Safari
+            document.documentElement.scrollTop = 1200; // For Chrome, Firefox, IE and Opera
+
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+            //this gives id of tr whose button was clicked
+            var data =
+                document.getElementById(rowId);
+            //alert(rowId);
+            /*returns array of all elements with 
+            "row-data" class within the row with given id*/
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var sFindID = deleted.slice(0, deleted.indexOf('<'));
+
+            //PopulateViewAdoption(name);
+
+            const dbref = ref(db);
+            get(child(dbref, sFormsStr + "/FosterForms/" + sFindID))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        LAngelNameF.innerHTML = snapshot.val().pg1_animalName;
+                        //LAngelGenderF.innerHTML = snapshot.val().;
+                        LAngelSpeciesF.innerHTML = snapshot.val().pg1_animalSelection;
+                        LClientFullNameF.innerHTML = snapshot.val().pg1_ownerNameAndSurname;
+                        LAddressF.innerHTML = snapshot.val().pg1_ownerAddress;
+                        LContactNumber1F.innerHTML = snapshot.val().pg2_ownerContactNumber;
+                        //LContactNumber2F.innerHTML = snapshot.val().;
+                        LEmailAddress1F.innerHTML = snapshot.val().pg2_ownerEmail;
+                        //LEmailAddress2F.innerHTML = snapshot.val().;
+                        LIdNumbersF.innerHTML = snapshot.val().pg2_ownerIDNumber;
+                        //LEnterNatureF.innerHTML = snapshot.val().;
+                        LMailingListF.innerHTML = snapshot.val().pg2_ownerAddToMailingList;
+                        LAgesOfChildrenF.innerHTML = snapshot.val().pg2_childrenAges;
+                        LOtherAnimalsF.innerHTML = snapshot.val().pg3_ageOfOtherAnimals_Dogs;
+                        LSterilizedF.innerHTML = snapshot.val().pg4_sterilizedOtherAnimals_Dogs;
+                        LNotSterilizedF.innerHTML = snapshot.val().pg4_steriReasonOtherAnimals_Dogs;
+                        //LLitterbeforeSterilizedF.innerHTML = snapshot.val().;
+                        LVaccinatedF.innerHTML = snapshot.val().pg4_vaxedOtherAnimals_Dogs;
+                        LDietF.innerHTML = snapshot.val().pg5_petsDiet;
+                        LHoursAloneF.innerHTML = snapshot.val().pg5_hoursAlone;
+                        LSomeoneAtHomeF.innerHTML = snapshot.val().pg6_petResponsibility_whenOnHoliday;
+                        //LAdoptionReasonF.innerHTML = snapshot.val().pg7_typeOfFostor;
+                        LGivenPetAwayF.innerHTML = snapshot.val().pg6_havePetsGoneMissing;
+                        LPetHistoryF.innerHTML = snapshot.val().pg6_previousPets;
+                        LTypeOfFosterF.innerHTML = snapshot.val().pg7_typeOfFostor;
+
+                        const answersFoster = document.getElementsByClassName("LabelsFoster");
+                        const inpBoxesFoster = document.getElementsByClassName("inputBoxesFoster");
+                        for (let i = 0; i < answersFoster.length; i++) 
+                        {
+                            answersFoster[i].style = "display: inline;";
+                            inpBoxesFoster[i].style ="display: none";
+                        }
+
+                       
+                    }
+                    else {
+                        alert("No data found");
+                    }
+                })
+                .catch((error) => {
+                    alert(error)
+                })            
+        }
+
+        //Variables for edit
+        var sFormID;
+        var editangelNameF;
+        var editangelSpeciesF;
+        var editclientFullNameF;
+        var editaddressF;
+        var editcontactNumber1F;
+        var editemailAddress1F;
+        var editidNumbersF;
+        var editmailingListF;
+        var editagesOfChildrenF;
+        var editotherAnimalsF;
+        var editsterilizedF;
+        var editnotSterilizedF;
+        var editvaccinatedF;
+        var editdietF;
+        var edithoursAloneF;
+        var editsomeoneAtHomeF;
+        var editgivenPetAwayF;
+        var editpetHistoryF;
+        var edittypeOfFosterF;
+
+        function EditFoster() {
+            document.body.scrollTop = 1300; // For Safari
+            document.documentElement.scrollTop = 1300; // For Chrome, Firefox, IE and Opera
+
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+            //this gives id of tr whose button was clicked
+            var data =
+                document.getElementById(rowId);
+            //alert(rowId);
+            /*returns array of all elements with 
+            "row-data" class within the row with given id*/
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var sFindID = deleted.slice(0, deleted.indexOf('<'));
+
+            //PopulateViewAdoption(name);
+
+            const dbref = ref(db);
+            get(child(dbref, sFormsStr + "/FosterForms/" + sFindID))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        sFormID = sFindID;
+                        angelNameF.value = snapshot.val().pg1_animalName;
+                        //LAngelGenderF.value = snapshot.val().;
+                        angelSpeciesF.value = snapshot.val().pg1_animalSelection;
+                        clientFullNameF.value = snapshot.val().pg1_ownerNameAndSurname;
+                        addressF.value = snapshot.val().pg1_ownerAddress;
+                        contactNumber1F.value = snapshot.val().pg2_ownerContactNumber;
+                        //LContactNumber2F.value = snapshot.val().;
+                        emailAddress1F.value = snapshot.val().pg2_ownerEmail;
+                        //LEmailAddress2F.value = snapshot.val().;
+                        idNumbersF.value = snapshot.val().pg2_ownerIDNumber;
+                        //LEnterNatureF.value = snapshot.val().;
+                        mailingListF.value = snapshot.val().pg2_ownerAddToMailingList;
+                        agesOfChildrenF.value = snapshot.val().pg2_childrenAges;
+                        otherAnimalsF.value = snapshot.val().pg3_ageOfOtherAnimals_Dogs;
+                        sterilizedF.value = snapshot.val().pg4_sterilizedOtherAnimals_Dogs;
+                        notSterilizedF.value = snapshot.val().pg4_steriReasonOtherAnimals_Dogs;
+                        //LLitterbeforeSterilizedF.value = snapshot.val().;
+                        vaccinatedF.value = snapshot.val().pg4_vaxedOtherAnimals_Dogs;
+                        dietF.value = snapshot.val().pg5_petsDiet;
+                        hoursAloneF.value = snapshot.val().pg5_hoursAlone;
+                        someoneAtHomeF.value = snapshot.val().pg6_petResponsibility_whenOnHoliday;
+                        //LAdoptionReasonF.value = snapshot.val().pg7_typeOfFostor;
+                        givenPetAwayF.value = snapshot.val().pg6_havePetsGoneMissing;
+                        petHistoryF.value = snapshot.val().pg6_previousPets;
+                        typeOfFosterF.value = snapshot.val().pg7_typeOfFostor;
+
+                        editangelNameF = snapshot.val().pg1_animalName;
+                        editangelSpeciesF = snapshot.val().pg1_animalSelection;
+                        editclientFullNameF = snapshot.val().pg1_ownerNameAndSurname;
+                        editaddressF = snapshot.val().pg1_ownerAddress;
+                        editcontactNumber1F = snapshot.val().pg2_ownerContactNumber;
+                        editemailAddress1F = snapshot.val().pg2_ownerEmail;
+                        editidNumbersF = snapshot.val().pg2_ownerIDNumber;
+                        editmailingListF = snapshot.val().pg2_ownerAddToMailingList;
+                        editagesOfChildrenF = snapshot.val().pg2_childrenAges;
+                        editotherAnimalsF = snapshot.val().pg3_ageOfOtherAnimals_Dogs;
+                        editsterilizedF = snapshot.val().pg4_sterilizedOtherAnimals_Dogs;
+                        editnotSterilizedF = snapshot.val().pg4_steriReasonOtherAnimals_Dogs;
+                        editvaccinatedF = snapshot.val().pg4_vaxedOtherAnimals_Dogs;
+                        editdietF = snapshot.val().pg5_petsDiet;
+                        edithoursAloneF = snapshot.val().pg5_hoursAlone;
+                        editsomeoneAtHomeF = snapshot.val().pg6_petResponsibility_whenOnHoliday;
+                        editgivenPetAwayF = snapshot.val().pg6_havePetsGoneMissing;
+                        editpetHistoryF = snapshot.val().pg6_previousPets;
+                        edittypeOfFosterF = snapshot.val().pg7_typeOfFostor;
+                        btnFosterConfirm.style="display:inline;";
+                        btnFosterClear.style="display:inline;";
+
+                        const answers = document.getElementsByClassName("LabelsFoster");
+                        const inpBoxes = document.getElementsByClassName("inputBoxesFoster");
+                        for (let i = 0; i < answers.length; i++) 
+                        {
+                            answers[i].style = "display: none;";
+                            inpBoxes[i].style="display: inline";
+                        }
+                        
+                        const answersAdopt = document.getElementsByClassName("AnsLabel");
+                        const inpBoxesAdopt = document.getElementsByClassName("inputBoxes");
+                        for (let i = 0; i < answersAdopt.length; i++) 
+                        {
+                            answersAdopt[i].style = "display: none;";
+                            inpBoxesAdopt[i].style="display: inline";
+                        }
+                    }
+                    else {
+                        alert("No data found");
+                    }
+                })
+                .catch((error) => {
+                    alert(error)
+                })            
+        }
+
+        function ConfirmEditFoster()
+        {
+            if (!confirm("Confirm Edit of this Record?")) { return }
+            //alert("Are you sure you want to edit this one?");
+            if (angelNameF.value == editangelNameF &&
+                angelSpeciesF.value == editangelSpeciesF &&
+                clientFullNameF.value == editclientFullNameF &&
+                addressF.value == editaddressF &&
+                contactNumber1F.value == editcontactNumber1F &&
+                emailAddress1F.value == editemailAddress1F &&
+                idNumbersF.value == editidNumbersF &&
+                mailingListF.value == editmailingListF &&
+                agesOfChildrenF.value == editagesOfChildrenF &&
+                otherAnimalsF.value == editotherAnimalsF &&
+                sterilizedF.value == editsterilizedF &&
+                notSterilizedF.value == editnotSterilizedF &&
+                vaccinatedF.value == editvaccinatedF &&
+                dietF.value == editdietF &&
+                hoursAloneF.value == edithoursAloneF &&
+                someoneAtHomeF.value == editsomeoneAtHomeF &&
+                givenPetAwayF.value == editgivenPetAwayF &&
+                petHistoryF.value == editpetHistoryF &&
+                typeOfFosterF.value == edittypeOfFosterF) {
+                alert("The information is still the same");
+                return
+            }
+            
+
+            update(ref(db,sFormsStr + "/FosterForms/" + sFindID), {
+                pg1_animalName:angelNameF.value,
+                pg1_animalSelection:angelSpeciesF.value,
+                pg1_ownerNameAndSurname:clientFullNameF.value,
+                pg1_ownerAddress:addressF.value,
+                pg2_ownerContactNumber:contactNumber1F.value,
+                pg2_ownerEmail:emailAddress1F.value,
+                pg2_ownerIDNumber:idNumbersF.value,
+                pg2_ownerAddToMailingList:mailingListF.value,
+                pg2_childrenAges:agesOfChildrenF.value,
+                pg3_ageOfOtherAnimals_Dogs:otherAnimalsF.value,
+                pg4_sterilizedOtherAnimals_Dogs:sterilizedF.value,
+                pg4_steriReasonOtherAnimals_Dogs:notSterilizedF.value,
+                pg4_vaxedOtherAnimals_Dogs:vaccinatedF.value,
+                pg5_petsDiet:dietF.value,
+                pg5_hoursAlone:hoursAloneF.value,
+                pg6_petResponsibility_whenOnHoliday:someoneAtHomeF.value,
+                pg6_havePetsGoneMissing:givenPetAwayF.value,
+                pg6_previousPets:petHistoryF.value,
+                pg7_typeOfFostor:typeOfFosterF.value
+            })
+                .then(() => {
+                    alert("Data updated successfully");
+                    window.location.reload();
+                })
+                .catch((error) => {
+                    alert(error);
+                    return
+                });
+            
+        }
+        
+        function RemoveFoster() {
+            if (!confirm("Are you sure you want to delete this record?")) { return }
+
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+            //this gives id of tr whose button was clicked
+            var data =
+                document.getElementById(rowId);
+            //alert(rowId);
+            /*returns array of all elements with 
+            "row-data" class within the row with given id*/
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var idToDelete = deleted.slice(0, deleted.indexOf('<'));
+
+            remove(ref(db,sFormsStr + "/FosterForms/" + idToDelete))
+                .then(() => {
+                    alert("Data deleted successfully");
+                    window.location.reload();
+                })
+                .catch((error) => {
+                    alert(error);
+                    return;
+                });
+            
+        }
+
+        function ClearFoster()
+        {
+            sFormID = "";
+            angelNameF.value = "";
+            angelSpeciesF.value = "";
+            clientFullNameF.value = "";
+            addressF.value = "";
+            contactNumber1F.value = "";
+            emailAddress1F.value = "";
+            idNumbersF.value = "";
+            mailingListF.value = "";
+            agesOfChildrenF.value = "";
+            otherAnimalsF.value = "";
+            sterilizedF.value = "";
+            notSterilizedF.value = "";
+            dietF.value = "";
+            hoursAloneF.value = "";
+            someoneAtHomeF.value = "";
+            givenPetAwayF.value = "";
+            petHistoryF.value = "";
+            typeOfFosterF.value = "";
+
+            btnFosterConfirm.style="display:none;";
+            btnFosterClear.style="display:none;";
+            const answers = document.getElementsByClassName("LabelsFoster");
+            const inpBoxes = document.getElementsByClassName("inputBoxesFoster");
+            for (let i = 0; i < answers.length; i++) 
+            {
+                answers[i].style = "display: none;";
+                inpBoxes[i].style="display: inline";
+            }
+        }
+
+        function toggleLabels()
+        {
+            const lblCollection = document.getElementsByClassName("labels");
+            const inpBoxes = document.getElementsByClassName("inputBoxes");
+            //lblCollection.style="display: inline;"
+            for (let i = 0; i < lblCollection.length; i++) 
+            {
+                lblCollection[i].style = "display: inline;";
+                inpBoxes[i].style="display: none";
+            }
+            
+        }
+        
+        function toggleBoxes()
+        {
+            const lblCollection = document.getElementsByClassName("labels");
+            const inpBoxes = document.getElementsByClassName("inputBoxes");
+            //lblCollection.style="display: inline;"
+            for (let i = 0; i < lblCollection.length; i++) 
+            {
+                lblCollection[i].style = "display: none;";
+                inpBoxes[i].style="display: inline";
+            }
+        }
+
+        // ------------ Functions that will load data into the |Users Table| from the Realtime Database
+    </script>
+</body>
+
+</html>
+
+<!--Referance list-->
+<!-- https://www.folkstalk.com/2022/09/javascript-generate-unique-id-with-code-examples.html -->
+<!-- https://www.youtube.com/results?search_query=upload+image+to+firebase+javascript -->

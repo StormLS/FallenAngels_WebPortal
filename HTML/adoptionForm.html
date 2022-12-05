@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="../CSS/adoptionForm.css">
+    <!--client-->
+    <ul class="nav">
+        <li><a href="../HTML/loginPage.html" style="color:#FF0066">Logout</a></li>
+        <li><a href="../WebPortal.html">Dogs</a></li>
+        <li><a href="../HTML/UsersPage.html">Users</a></li>
+    </ul>
+    <!--top-->
+    <div id="Fur-AngelInformation" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+            <button id="backBtn">Back</button>
+            <button id="showLabels" onclick = toggleLabels()>Show Labels</button>
+            <button id="showInfo" onclick =toggleBoxes()>Show Details</button>
+            <h1>Adoption Form</h1>
+        </div>
+    <div id="Fur-AngelInformation" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+            <label>Fur-Angel </label>
+        </div>
+        <div class="row">
+            <!--The Fur Angel Information-->
+            <div class="column">
+                <label class="labels" id="LangelName1">First Choice</label>
+                <input class="inputBoxes" id="angelName1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LAngelGender1">Male/Female</label>
+                <input class="inputBoxes" id="angelGender1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LAngelSpecies1">Feline/Canine</label>
+                <input class="inputBoxes" id="angelSpecies1" type="text">
+
+            </div>
+            <div class="column">
+
+            </div>
+
+            <div class="column">
+                <label class="labels" id="LangelName2">Second Choice</label>
+                    <input class="inputBoxes" id="angelName2" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LAngelGender2">Male/Female</label>
+                <input class="inputBoxes" id="angelGender2" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LAngelSpecies2">Feline/Canine</label>
+                <input class="inputBoxes" id="angelSpecies2" type="text">
+            </div>
+            <div class="column">
+
+            </div>
+        </div>
+    </div>
+    <!--Client Information-->
+    <div id="Fur-AngelInformation" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+
+            <label>Client Details</label>
+
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <label class="labels" id="LClientFullName">Client Fullname</label>
+                <input class="inputBoxes" id="clientFullName" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LAdress">Adress</label>
+                <input class="inputBoxes" id="adress" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LContactNumber1">Contact Number 1</label>
+                <input class="inputBoxes" id="contactNumber1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LContactNumber2">Contact Number 2</label>
+                <input class="inputBoxes" id="contactNumber2" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LEmailAddress1">Contact Email Address 1</label>
+                <input class="inputBoxes" id="emailAddress1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LEmailAddress2">Contact Email Address 2</label>
+                <input class="inputBoxes" id="emailAddress2" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LIdNumbers">ID Number/s</label>
+                <input class="inputBoxes" id="idNumbers" type="text">
+            </div>
+            <!--bool?-->
+            <div class="column">
+                <label class="labels" id="LMailingList" >Mailing List</label>
+                <input class="inputBoxes" id="mailingList" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LAgesOfChildren">Ages of Children</label>
+                <input class="inputBoxes" id="agesOfChildren" type="text">
+            </div>
+        </div>
+    </div>
+    <!--Home Details-->
+    <div id="HomeDetails" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+
+            <label>Home Details</label>
+
+
+        </div>
+
+        <div class="row">
+            <div class="column">
+                <!--other Animals might need more details-->
+                <label class="labels" id="LOtherAnimals" >Other Animals</label>
+                <input class="inputBoxes" id="otherAnimals" type="text">
+            </div>
+            <!--bool?-->
+            <div class="column">
+                <label class="labels" id="LSterilized"  >Sterilized</label>
+                <input class="inputBoxes" id="sterilized" type="text">
+            </div>
+            <!--might change-->
+            <div class="column">
+                <label class="labels" id="LnotSterilized" >Not Sterilized</label>
+                <input class="inputBoxes" id="notSterilized" type="text">
+            </div>
+            <div class="column">
+                <!--bool?-->
+                <label class="labels" id="LlitterbeforeSterilized" >Did animals have litter</label>
+                <input class="inputBoxes" id="litterbeforeSterilized" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LVaccinated" >Vaccinated</label>
+                <input class="inputBoxes" id="vaccinated" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="Ldiet" >Diet</label>
+                <input class="inputBoxes" id="diet" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LhoursAlone" >Quantity hours alone</label>
+                <input class="inputBoxes" id="hoursAlone" type="text">
+            </div>
+            <div class="column">
+
+                <label class="labels" id="LSomeoneAtHome" >Someone at home</label>
+                <input class="inputBoxes" id="someoneAtHome" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LAdoptionReason">Adoption Reason</label>
+                <input class="inputBoxes" id="adoptionReason" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LGivenPetAway" >Given away pet</label>
+                <input class="inputBoxes" id="givenPetAway" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LPetHistory">Previous Pet History</label>
+                <input class="inputBoxes" id="petHistory" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LMissingPet" >Missing Pet</label>
+                <input class="inputBoxes" id="missingPet" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LpermanentHome" >Prepared to Give permanent Home</label>
+                <input class="inputBoxes" id="permanentHome" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LtrainPet" >Train Pet</label>
+                <input class="inputBoxes" id="trainPet" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LholidayPetCare" >Holiday Pet Care</label>
+                <input class="inputBoxes" id="holidayPetCare" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LCircumstancesChange" >Circumstance change</label>
+                <input class="inputBoxes" id="circumstancesChange" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LLocation" >Sleep Location</label>
+                <input class="inputBoxes" id="location" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LShelterOutside">Shelter if Outside</label>
+                <input class="inputBoxes" id="shelterOutside" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LTimeInside" >Time Inside</label>
+                <input class="inputBoxes" id="timeInside" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LFencedOrGated"  >Fenced/Gated</label>
+                <input class="inputBoxes" id="fencedOrGated" type="text">
+            </div>
+            <!--might change-->
+            <div class="column">
+                <label class="labels" id="LPool" >Pool</label>
+                <input class="inputBoxes" id="pool" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LFeeding">Feeding</label>
+                <input class="inputBoxes" id="feeding" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LGardenSize">Garden Size</label>
+                <input class="inputBoxes" id="gardenSize" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LTimeForPet" >Time for pet</label>
+                <input class="inputBoxes" id="timeForPet" type="text">
+            </div>
+            <div class="column">
+                <!--bool?-->
+                <label class="labels" id="LParvoOrDistemper" >Parvo/Distemper</label>
+                <input class="inputBoxes" id="parvoOrDistemper" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LQualityCare" >Quality Care</label>
+                <input class="inputBoxes" id="qualityCare" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LTypeOfHousing">Type of Housing</label>
+                <input class="inputBoxes" id="typeOfHousing" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LOwnOrRent" >Own or Rent</label>
+                <input class="inputBoxes" id="ownOrRent" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LTransport" >Transport</label>
+                <input class="inputBoxes" id="Transport" type="text">
+            </div>
+            <div class="column">
+                <!--Bool?-->
+                <label class="labels" id="LDiet">Understand Vaccinations</label>
+                <input class="inputBoxes" id="diet" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LAgeOfSterilization" >Age of Sterilization</label>
+                <input class="inputBoxes" id="ageOfSterilization" type="text">
+            </div>
+        </div>
+    </div>
+    <!--Reference1-->
+    <div id="Reference1" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+
+            <label>Reference 1</label>
+
+
+        </div>
+        <div class="row">
+            <div class="column">
+                <label class="labels" id="LrefName1" >Name</label>
+                <input class="inputBoxes" id="refName1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LRefRelation1">Relationship</label>
+                <input class="inputBoxes" id="refRelation1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LRefAdress1" >Address</label>
+                <input class="inputBoxes" id="refAdress1" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LRefCellAndLandline1">Cell and Landline</label>
+                <input class="inputBoxes" id="refCellAndLandline1" type="text">
+            </div>
+        </div>
+        <!--Reference2-->
+        <div id="Reference2" style="border: 2px solid black; text-align: center;">
+            <div class="row" id="FormHeaders">
+
+                <label>Reference 2</label>
+
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label class="labels" id="LrefName2" >Name</label>
+                    <input class="inputBoxes" id="refName2" type="text">
+                </div>
+                <div class="column">
+                    <label class="labels" id="LRefRelation2" >Relationship</label>
+                    <input class="inputBoxes" id="refRelation2" type="text">
+                </div>
+                <div class="column">
+                    <label class="labels" id="LRefAdress2" >Address</label>
+                    <input class="inputBoxes" id="refAdress2" type="text">
+                </div>
+                <div class="column">
+                    <label class="labels" id="LRefCellAndLandline2">Cell and Landline</label>
+                    <input class="inputBoxes" id="refCellAndLandline2" type="text">
+                </div>
+
+
+            </div>
+        </div>
+
+        <div>
+            <img id="logo" width="300" height="200" src="black_fallenangels_logo.png" alt="black_fallenangels_logo">
+        </div>
+        <script>
+            function toggleLabels()
+            {
+                const lblCollection = document.getElementsByClassName("labels");
+                const inpBoxes = document.getElementsByClassName("inputBoxes");
+                //lblCollection.style="display: inline;"
+                for (let i = 0; i < lblCollection.length; i++) 
+                {
+                    lblCollection[i].style = "display: inline;";
+                    inpBoxes[i].style="display: none";
+
+                }
+                
+            }
+            function toggleBoxes()
+            {
+                const lblCollection = document.getElementsByClassName("labels");
+                const inpBoxes = document.getElementsByClassName("inputBoxes");
+                //lblCollection.style="display: inline;"
+                for (let i = 0; i < lblCollection.length; i++) 
+                {
+                    lblCollection[i].style = "display: none;";
+                    inpBoxes[i].style="display: inline";
+
+                }
+
+            }
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial;
+  font-size: 17px;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+        /* text alignment*/
+        div {text-align: center;}
+
+        /* columns*/
+        * {
+  box-sizing: border-box;
+}
+
+
+.column {
+  float: left;
+  width: 50%;
+  margin: auto;
+  height: 350px; 
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* center labels */
+div {
+        margin-bottom: 10px;
+      }
+      label {
+        display: inline-block;
+        width: 150px;
+        text-align: center;
+      }
+
+      /* button edits */
+      .button {
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button1 {background-color: #FF0066;} 
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details Page</title>
+    <link rel="stylesheet" href="./angelDetailsCSS.css">
+    <script type="text/javascript" src="angelDetailsScript.js"></script>
+</head>
+<ul class="nav">
+    <li><a href="https://www.fallenangels.org.za/">Home</a></li>
+    <div class="square"></div>
+    <li><a href="https://www.fallenangels.org.za/fur-angels-for-adoption">Fur Angels For Adoption</a></li>
+    <div class="square"></div>
+    <li><a href="https://www.fallenangels.org.za/about">About</a></li>
+    <div class="square"></div>
+    <li><a href="https://www.fallenangels.org.za/support-us">Support Us</a></li>
+    <div class="square"></div>
+    <li><a href="https://www.fallenangels.org.za/events">Events</a></li>
+    <div class="square"></div>
+    <li><a href="https://www.fallenangels.org.za/gallery">Gallery</a></li>
+    <div class="square"></div>
+    <li><a href="https://www.fallenangels.org.za/copy-of-contact">Contact</a></li>
+    <div class="square"></div>
+    <li><a href="WebPortal.html" class="active">App</a></li>
+</ul>
+
+
+<div class="container">
+    <img src="fallenangels.jpg" alt="FA logo" style="width:50%;">
+    <p><h1>Details for: Teddy</h1></p>
+</div >
+
+
+
+    <div class="row">
+        <div class="column" style="background-color: #ffffff">
+      <u><h3>Breed:</h3></u>
+      <input type="text">
+    
+        <u><h3>Date Of Birth:</h3></u>
+         <input type="text">
+  
+        <u><h3>Gender:</h3></u> 
+        <input type="text">
+   
+        <u><h3>History:</h3> </u>
+        <input type="text">
+    </div>
+
+    <div class="row">
+        <div class="column" style="background-color:#ffffff">
+        <u><h3>Intake:</h3></u>
+        <input type="text">
+   
+        <u><h3>Name:</h3></u>
+        <input type="text">
+    
+        <u><h3>Nature:</h3></u>
+        <input type="text">
+  
+        <u><h3>Suit:</h3></u>
+        <input type="text">
+    </div>
+    </div>
+
+    
+
+    <div>
+        <button class="button button1" onclick="alert('successfully updated')">Update</button>
+    </div>
+
+
+    
+</div> <!--THIS ONLY WORKS HERE-->
+<script type="module">
+    const image_drop_area = document.querySelector("#image_drop_area");
+    var uploaded_image;
+
+    // Event listener for dragging the image over the div
+    image_drop_area.addEventListener('dragover', (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        // Style the drag-and-drop as a "copy file" operation.
+        event.dataTransfer.dropEffect = 'copy';
+    });
+
+    // Event listener for dropping the image inside the div
+    image_drop_area.addEventListener('drop', (event) => {
+        event.stopPropagation();
+        event.preventDefault();
+        fileList = event.dataTransfer.files;
+
+        document.querySelector("#file_name").textContent = fileList[0].name;
+
+        readImage(fileList[0]);
+    });
+
+    // Converts the image into a data URI
+    readImage = (file) => {
+        const reader = new FileReader();
+        reader.addEventListener('load', (event) => {
+            uploaded_image = event.target.result;
+            document.querySelector("#UploadedImage").src = `url(${uploaded_image})`;
+        });
+        reader.readAsDataURL(file);
+    }
+</script>
+
+
+</html>

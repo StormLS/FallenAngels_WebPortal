@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+</head>
+
+<body>
+    <link rel="stylesheet" href="./webPortalCSS.css">
+
+    <ul class="nav">
+        <!--<li><a href="https://www.fallenangels.org.za/">Home</a></li>
+        <div class="square"></div>
+        <li><a href="https://www.fallenangels.org.za/fur-angels-for-adoption">Fur Angels For Adoption</a></li>
+        <div class="square"></div>
+        <li><a href="https://www.fallenangels.org.za/about">About</a></li>
+        <div class="square"></div>
+        <li><a href="https://www.fallenangels.org.za/support-us">Support Us</a></li>
+        <div class="square"></div>
+        <li><a href="https://www.fallenangels.org.za/events">Events</a></li>
+        <div class="square"></div>
+        <li><a href="https://www.fallenangels.org.za/gallery">Gallery</a></li>
+        <div class="square"></div>
+        <li><a href="https://www.fallenangels.org.za/copy-of-contact">Contact</a></li>
+        <div class="square"></div> -->
+        <li><a href="HTML/loginPage.html" style="color:#FF0066">Logout</a></li>
+        <li><a href="WebPortal.html">Dogs</a></li>
+        <li><a href="HTML/UsersPage.html">Users</a></li>
+    </ul>
+
+    <div id="enterDetails">
+        <!-- Image Segment -->
+        <div style=" text-align: center;">
+            <!-- Main Heading -->
+            <br>
+            <h1 style="color: white;">Enter New Dog Profile</h1>
+            <br>
+            <img id="myimg" style="background-color: white; height: 330px; width: 250px;">
+            <br><br>
+            <label style="color: white;">Image Name: </label><input type="text" id="namebox"><label
+                style="color: white;" id="extlab" style="display:inline"></label>
+            <br><br>
+            <button class="buttonTwo button1" id="selbtn" style="display:inline">Select Image</button>
+            <!-- <button class="buttonTwo button1" id="downbtn" style="display:inline">Retrieve Image</button>-->
+            <br><br>
+        </div>
+        <!-- Image Segment -->
+
+        <!-- User Input Fields Segment -->
+        <div id="tableContainer" style=" text-align: center;">
+            <div class="row">
+                <div class="column">
+                    <label class="boldLabels">Breed:</label>
+                    <label id="lBreed" style="display: none;"></label>
+                    <input id="enterBreed" type="text">
+                </div>
+                <div class="column">
+                    <label class="boldLabels">Date of Birth:</label>
+                    <label id="lDOB" style="display: none;"></label>
+                    <input id="enterDOB" type="text">
+                </div>
+                <div class="column">
+                    <label class="boldLabels">Gender:</label>
+                    <label id="lGender" style="display: none;"></label>
+                    <input id="enterGender" type="text">
+                </div>
+                <div class="column">
+                    <label class="boldLabels">History:</label>
+                    <label id="lHistory" style="display: none;"></label>
+                    <input id="enterHistory" type="text">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label class="boldLabels">Intake:</label>
+                    <label id="lIntake" style="display: none;"></label>
+                    <input id="enterIntake" type="text">
+                </div>
+                <div class="column">
+                    <label class="boldLabels">Name:</label>
+                    <label id="lName" style="display: none;"></label>
+                    <input id="enterName" type="text">
+                </div>
+                <div class="column">
+                    <label class="boldLabels">Nature:</label>
+                    <label id="lNature" style="display: none;"></label>
+                    <input id="enterNature" type="text">
+                </div>
+                <div class="column">
+                    <label class="boldLabels">Suit:</label>
+                    <label id="lSuit" style="display: none;">Suit</label>
+                    <input id="enterSuit" type="text">
+                </div>
+            </div>
+        </div>
+        <!-- User Input Fields Segment -->
+    </div>
+
+    <!-- Buttons Segment -->
+    <div class="center">
+        <br><br>
+        <button class="buttonOne button1" id="insert">INSERT</button>
+        <button class="buttonTwo button1" id="update">UPDATE</button>
+        <button class="buttonThree button1" id="clear">CLEAR</button>
+        <br><br>
+        <label id="upprogress"></label>
+    </div>
+    <!-- Buttons Segment -->
+
+    <div id="tbl">
+        <h2 class="Centred">Fur Angels</h2>
+        <table id="tblAngels">
+            <thead>
+                <th>Name</th>
+                <th>Breed</th>
+                <th>Date of Birth</th>
+                <th></th>
+            </thead>
+            <tbody id="tblBody">
+                <!-- LAYOUT TEMPLET
+                <tr>
+                    <td>TEMPLET - REMOVE ME</td>
+                    <td>TEMPLET - REMOVE ME</td>
+                    <td>TEMPLET - REMOVE ME</td>
+                    <td><button>Edit</button></td>
+                    <td><button style="background-color: #FF8A00;">Update</button></td>
+                    <td><button style="background-color: #BF2525;">Remove</button></td>
+                </tr>-->
+            </tbody>
+
+        </table>
+    </div>
+
+    <!-- DEBUG Finding exsisting Database information, this is debug code that will need to be removed. This is being intergrated with the tables DEBUG -->
+    <!---->
+  
+
+    <div class="returnedDoggy">
+        <!-- HIDDEN TEXT FIELDS FOR RETURNED DATA -->
+        <h3 id="findBreed" type="text"></h3>
+        <h3 id="findDOB" type="text"></h3>
+        <h3 id="findGender" type="text"></h3>
+        <h3 id="findHistory" type="text"></h3>
+        <h3 id="findIntake" type="text"></h3>
+        <h3 id="findName" type="text"></h3>
+        <h3 id="findNature" type="text"></h3>
+        <h3 id="findPicture" type="text"></h3>
+        <h3 id="findSuit" type="text"></h3>
+    </div>
+    <!---->
+    <!-- DEBUG Finding exsisting Database information, this is debug code that will need to be removed. This is being intergrated with the tables DEBUG -->
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-database.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <script type="module">
+
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-analytics.js";
+        import { getDatabase, set, get, update, remove, ref, child } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-database.js"
+        import { getStorage, ref as sRef, uploadBytesResumable, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-storage.js"
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBZoOVjRKGACWUvQpJA3UckRoyUk5gO86w",
+            authDomain: "fallenangels-app.firebaseapp.com",
+            databaseURL: "https://fallenangels-app-default-rtdb.firebaseio.com",
+            projectId: "fallenangels-app",
+            storageBucket: "fallenangels-app.appspot.com",
+            messagingSenderId: "249997131314",
+            appId: "1:249997131314:web:88c602c997d340a32a462b",
+            measurementId: "G-FC0WZTP5VR"
+        };
+
+        // Initialize Firebase Elements
+        firebase.initializeApp(firebaseConfig);
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+        const db = getDatabase();
+
+
+        //User Input
+        var DogID = document.querySelector("#enterDogID") // The unique identifer of every dog
+
+        //--- Code for when the user wants to upload a image to the database
+        var files = [];
+        var reader = new FileReader();
+
+        var namebox = document.getElementById('namebox');
+        var extlab = document.getElementById('extlab');
+        var myimg = document.getElementById('myimg');
+        var proglab = document.getElementById('upprogress');
+        var SelBtn = document.querySelector('#selbtn');
+        var UpBtn = document.querySelector('#upbtn');
+        var DownBtn = document.getElementById('downbtn');
+
+        var imgInput = document.createElement('input');
+        imgInput.type = 'file';
+
+        imgInput.onchange = e => {
+            files = e.target.files;
+
+            var extention = GetFileExt(files[0]);
+            var name = GetFileName(files[0]);
+
+            namebox.value = name;
+            extlab.innerHTML = extention;
+
+            reader.readAsDataURL(files[0]);
+        }
+
+        reader.onload = function () {
+            myimg.src = reader.result;
+        }
+
+        //Selection process for the image
+        SelBtn.onclick = function () {
+            imgInput.click();
+        }
+
+        function GetFileExt(file) {
+            var temp = file.name.split('.');
+            var ext = temp.slice((temp.length - 1), (temp.length));
+            return '.' + ext[0];
+        }
+
+        function GetFileName(file) {
+            var temp = file.name.split('.');
+            var fname = temp.slice(0, -1).join('.');
+            return fname;
+        }
+        //Selection process for the image
+
+        //Uploading process Storing the image in FIREBASE STORAGE DATABASE
+        async function UploadProcess() {
+            var ImgToUpload = files[0];
+            var ImgName = namebox.value + extlab.innerHTML;
+
+            if (!ValidateName()) {
+                alert('Name cannot contain, ".", "#", "$", "[", or "]"');
+                return;
+            }
+
+            const metaData = {
+                contentType: ImgToUpload.type
+            }
+
+            const storage = getStorage();
+
+            const storageRef = sRef(storage, "DogImages/" + ImgName);
+
+            const UploadTask = uploadBytesResumable(storageRef, ImgToUpload, metaData);
+
+            UploadTask.on('state-changed', (snapshot) => {
+                var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                proglab.innerHTML = "Upload " + progress + "%";
+            },
+                (error) => {
+                    alert("error: image not uploaded!")
+                },
+                () => {
+                    getDownloadURL(UploadTask.snapshot.ref).then((downloadURL) => {
+                        SaveURLtoRealtimDB(downloadURL);
+                    });
+                }
+            );
+        }
+        //Uploading process Storing the image in FIREBASE STORAGE DATABASE
+
+        //Storing the image in the REALTIME DATABASE 
+        function SaveURLtoRealtimDB(URL) {
+            var name = namebox.value;
+            var ext = extlab.innerHTML;
+
+            var generateUUID = uuid(); // uuid(); I wanna use the UUID in the future but need to work a bit more with it, for now create a ID
+
+            set(ref(db, "Dogs/" + generateUUID), {
+                Breed: enterBreed.value,
+                DOB: enterDOB.value,
+                Gender: enterGender.value,
+                History: enterHistory.value,
+                ID: generateUUID,
+                ImgURL: URL,
+                Intake: enterIntake.value,
+                Name: enterName.value,
+                Nature: enterNature.value,
+                Suit: enterSuit.value
+            });
+        }
+        //Storing the image in the REALTIME DATABASE
+
+        //Retrieving the image in the REALTIME DATABASE
+        function GetURLFromRealtimDB() {
+            var name = namebox.value;
+
+            var dbRef = ref(db);
+
+            get(child(dbRef, "Dogs/df553b4f-7f01-46d2-95c1-377d468d4998")).then((snapshot) => {
+                if (snapshot.exists()) {
+                    myimg.src = snapshot.val().ImgURL;
+                }
+            })
+        }
+
+        function ValidateName() { //Checks to see if the picture name contains illegal characters
+            var regex = /[\.#$[\]]/
+            return !(regex.test(namebox.value))
+        }
+
+        //DownBtn.onclick = GetURLFromRealtimDB;
+        //Retrieving the image in the REALTIME DATABASE
+
+        //--- Code for when the user wants to upload a image to the database
+
+        var enterBreed = document.querySelector("#enterBreed");
+        var enterDOB = document.querySelector("#enterDOB");
+        var enterGender = document.querySelector("#enterGender");
+        var enterHistory = document.querySelector("#enterHistory");
+        var enterIntake = document.querySelector("#enterIntake");
+        var enterName = document.querySelector("#enterName");
+        var enterNature = document.querySelector("#enterNature");
+        var enterSuit = document.querySelector("#enterSuit");
+        var enterImg = document.querySelector("#namebox");
+        
+        //User Input
+
+        //Finding Labels
+        var findID = document.querySelector("#findID");
+
+        var findBreed = document.querySelector("#findBreed");
+        var findDOB = document.querySelector("#findDOB");
+        var findGender = document.querySelector("#findGender");
+        var findHistory = document.querySelector("#findHistory");
+        var findIntake = document.querySelector("#findIntake");
+        var findName = document.querySelector("#findName");
+        var findNature = document.querySelector("#findNature");
+        var findPicture = document.querySelector("#findPicture");
+        var findSuit = document.querySelector("#findSuit");
+        //Finding Labels
+
+        // Showing the details on the labels before setting them to editing mode
+        var lBreed = document.querySelector("#lBreed");
+        var lDOB = document.querySelector("#lDOB");
+        var lGender = document.querySelector("#lGender");
+        var lHistory = document.querySelector("#lHistory");
+        var lIntake = document.querySelector("#lIntake");
+        var lName = document.querySelector("#lName");
+        var lNature = document.querySelector("#lNature");
+        var lSuit = document.querySelector("#lSuit");
+
+        //Buttons
+        var insertBtn = document.querySelector("#insert");
+        var updateBtn = document.querySelector("#update");
+        var clearBtn = document.querySelector("#clear");
+        var findBtn = document.querySelector("#find");
+        //Buttons
+
+        // Listeners that listen for CLICK events on the Website
+        insertBtn.addEventListener('click', InsertData);
+        updateBtn.addEventListener('click', UpdateData);
+        clearBtn.addEventListener('click', ClearData);
+        //findBtn.addEventListener('click', FindData);
+        // Listeners that listen for CLICK events on the Website
+
+        //All the functions that make the website work
+        function InsertData() {
+            UploadProcess();
+        }
+
+        function FindData() {
+            const dbref = ref(db);
+
+            get(child(dbref, "Dogs/" + findID.value))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        findBreed.innerHTML = "Breed: " + snapshot.val().Breed;
+                        findDOB.innerHTML = "Date of Birth: " + snapshot.val().DOB;
+                        findGender.innerHTML = "Gender: " + snapshot.val().Gender;
+                        findHistory.innerHTML = "History: " + snapshot.val().History;
+                        myimg.src = snapshot.val().ImgURL;
+                        findIntake.innerHTML = "Intake: " + snapshot.val().Intake;
+                        findName.innerHTML = "Name: " + snapshot.val().Name;
+                        findNature.innerHTML = "Nature: " + snapshot.val().Nature;
+                        findSuit.innerHTML = "Suit: " + snapshot.val().Suit;
+                    }
+                    else {
+                        alert("No data found");
+                    }
+                })
+                .catch((error) => {
+                    alert(error)
+                })
+
+        }
+
+        function RemoveData() {
+            remove(ref(db, "Dogs/" + DogID.value))
+                .then(() => {
+                    alert("Data deleted successfully");
+                })
+                .catch((error) => {
+                    alert(error);
+                });
+        }
+
+        function uuid() {
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g,
+
+                function (c) {
+                    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);
+                    return v.toString(16);
+                });
+        }
+        //All the functions that make the website work
+
+        // ------------ Functions that will load data into the |Angels Table| from the Realtime Database
+
+        //Loading the table
+        function SelectAllData() {
+            //const dbref = ref(db);
+
+            firebase.database().ref('Dogs').once('value',
+                function (AllRecords) {
+                    AllRecords.forEach(
+                        function (CurrentRecord) {
+                            var dogid = CurrentRecord.val().ID;
+                            var name = CurrentRecord.val().Name;
+                            var breed = CurrentRecord.val().Breed;
+                            var dateOfBirth = CurrentRecord.val().DOB;
+                            AddToTable(dogid, name, breed, dateOfBirth);
+                        });
+                });
+        }
+
+        window.onload = SelectAllData; // this happens as soon as the window loads
+        //window.onload = SelectAllDataForUsers; // this happens as soon as the window loads
+        let iCount = 0;
+        //Filling the rows up
+        function AddToTable(dogid, name, breed, dateOfBirth) {
+            var tbody = document.querySelector('#tblBody');
+            var trow = document.createElement('tr');
+            var tdId = document.createElement('td');
+            var tdName = document.createElement('td');
+            var tdBreed = document.createElement('td');
+            var tdDate = document.createElement('td');
+
+            var tdEditBtn = document.createElement('td');
+            var tdUpdateBtn = document.createElement('td');
+            var tdRemoveBtn = document.createElement('td');
+
+            var btnEdit = document.createElement('button');
+            var btnUpdate = document.createElement('button2');
+            var btnRemove = document.createElement('button3');
+            //btn.onclick = window.location.href='./angelDetails.html';
+            var count = Number(iCount);
+            trow.id = "DogRowNo" + count.toString();
+            //tbody.innerHTML ="<input type='button' id='foo+i' value='Hello'>";
+            count++;
+            iCount = count;
+
+            btnEdit.textContent = "View";
+            btnUpdate.textContent = "Edit";
+            btnRemove.textContent = "Remove";
+
+            btnEdit.addEventListener('click', show);
+            btnUpdate.addEventListener('click', ShowDetailsForUpdate);
+            btnRemove.addEventListener('click', DeleteDetails);
+
+            tdEditBtn.appendChild(btnEdit);
+            tdUpdateBtn.appendChild(btnUpdate);
+            tdRemoveBtn.appendChild(btnRemove);
+
+            tdId.innerHTML = dogid;
+            tdName.innerHTML = name;
+            tdBreed.innerHTML = breed;
+            tdDate.innerHTML = dateOfBirth;
+
+            tdId.style = "display:none;";
+
+            trow.appendChild(tdId);
+            trow.appendChild(tdName);
+            trow.appendChild(tdBreed);
+            trow.appendChild(tdDate);
+
+            trow.appendChild(tdEditBtn);
+            trow.appendChild(tdUpdateBtn);
+            trow.appendChild(tdRemoveBtn);
+
+            tbody.appendChild(trow);
+        }
+
+        function ShowDetails() {
+            //window.location.href = './angelDetails.html';
+        }
+
+        function show() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+            //this gives id of tr whose button was clicked
+            var data =
+                document.getElementById(rowId);
+            //alert(rowId);
+            /*returns array of all elements with 
+            "row-data" class within the row with given id*/
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var name = deleted.slice(0, deleted.indexOf('<'));
+
+            //alert("ID: " + name);
+            showDetailsOnPage(name);
+        }
+
+        function showDetailsOnPage(findThisID) {
+            const dbref = ref(db);
+            get(child(dbref, "Dogs/" + findThisID))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        lBreed.innerHTML = snapshot.val().Breed;
+                        lDOB.innerHTML = snapshot.val().DOB;
+                        lGender.innerHTML = snapshot.val().Gender;
+                        lHistory.innerHTML = snapshot.val().History;
+                        myimg.src = snapshot.val().ImgURL;
+                        lIntake.innerHTML = snapshot.val().Intake;
+                        lName.innerHTML = snapshot.val().Name;
+                        lNature.innerHTML = snapshot.val().Nature;
+                        lSuit.innerHTML = snapshot.val().Suit;
+
+                        //Making the Editboxes invisable
+                        enterBreed.style = "display:none;";
+                        enterDOB.style = "display:none;";
+                        enterGender.style = "display:none;";
+                        enterHistory.style = "display:none;";
+                        enterIntake.style = "display:none;";
+                        enterName.style = "display:none;";
+                        enterNature.style = "display:none;";
+                        enterSuit.style = "display:none;";
+
+                        //Making the labels visible
+                        lBreed.style = "display:inline;";
+                        lDOB.style = "display:inline;";
+                        lGender.style = "display:inline;";
+                        lHistory.style = "display:inline;";
+                        lIntake.style = "display:inline;";
+                        lName.style = "display:inline;";
+                        lNature.style = "display:inline;";
+                        lSuit.style = "display:inline;";
+
+                        clearBtn.style = "display:inline;";
+                        insertBtn.style = "display:none;";
+                        updateBtn.style = "display:none;";
+                    }
+                    else {
+                        alert("No data found");
+                    }
+                })
+                .catch((error) => {
+                    alert(error)
+                })
+        }
+
+        // All The code for Updating
+
+        var sDogID;
+
+        var editBreed;
+        var editDOB;
+        var editGender;
+        var editHistory;
+        var editIntake;
+        var editName;
+        var editNature;
+        var editSuit;
+        var editImg;
+
+        function ShowDetailsForUpdate() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+            //this gives id of tr whose button was clicked
+            var data =
+                document.getElementById(rowId);
+            //alert(rowId);
+            /*returns array of all elements with 
+            "row-data" class within the row with given id*/
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var findThisID = deleted.slice(0, deleted.indexOf('<'));
+
+            const dbref = ref(db);
+            get(child(dbref, "Dogs/" + findThisID))
+                .then((snapshot) => {
+                    if (snapshot.exists()) {
+                        sDogID = findThisID;
+
+                        editBreed = snapshot.val().Breed;
+                        editDOB = snapshot.val().DOB;
+                        editGender = snapshot.val().Gender;
+                        editHistory = snapshot.val().History;
+                        editIntake = snapshot.val().Intake;
+                        editName = snapshot.val().Name;
+                        editNature = snapshot.val().Nature;
+                        editSuit = snapshot.val().Suit;
+                        editImg = snapshot.val().ImgURL;
+
+                        enterBreed.value = editBreed;
+                        enterDOB.value = editDOB;
+                        enterGender.value = editGender;
+                        enterHistory.value = editHistory;
+                        enterIntake.value = editIntake;
+                        enterName.value = editName;
+                        enterNature.value = editNature;
+                        enterSuit.value = editSuit;
+                        myimg.src = editImg;
+                        enterImg.value = editImg;
+
+                        //Making the Editboxes visable
+                        enterBreed.style = "display:inline;";
+                        enterDOB.style = "display:inline;";
+                        enterGender.style = "display:inline;";
+                        enterHistory.style = "display:inline;";
+                        enterIntake.style = "display:inline;";
+                        enterName.style = "display:inline;";
+                        enterNature.style = "display:inline;";
+                        enterSuit.style = "display:inline;";
+
+                        //Making the labels invisible
+                        lBreed.style = "display:none;";
+                        lDOB.style = "display:none;";
+                        lGender.style = "display:none;";
+                        lHistory.style = "display:none;";
+                        lIntake.style = "display:none;";
+                        lName.style = "display:none;";
+                        lNature.style = "display:none;";
+                        lSuit.style = "display:none;";
+
+                        clearBtn.style = "display:inline;";
+                        insertBtn.style = "display:none;";
+                        updateBtn.style = "display:inline;";
+                    }
+                    else {
+                        alert("No data found");
+                    }
+                })
+                .catch((error) => {
+                    alert(error)
+                })
+        }
+
+        function UpdateData() {
+            if (enterBreed.value == editBreed &&
+                enterDOB.value == editDOB &&
+                enterGender.value == editGender &&
+                enterHistory.value == editHistory &&
+                enterIntake.value == editIntake &&
+                enterName.value == editName &&
+                enterNature.value == editNature &&
+                enterSuit.value == editSuit &&
+                myimg.src == editImg) {
+                alert("The information is still the same");
+                return
+            }
+
+            update(ref(db, "Dogs/" + sDogID), {
+                Breed: enterBreed.value,
+                DOB: enterDOB.value,
+                Gender: enterGender.value,
+                History: enterHistory.value,
+                Intake: enterIntake.value,
+                Name: enterName.value,
+                Nature: enterNature.value,
+                ImgURL: enterImg.value,
+                Suit: enterSuit.value
+            })
+                .then(() => {
+                    alert("Data updated successfully");
+                    window.location.reload();
+                })
+                .catch((error) => {
+                    alert(error);
+                    return
+                });
+            
+        }
+
+        function DeleteDetails() {
+            if (!confirm("Are you sure you want to delete this record?")) { return }
+
+            var rowId =
+                event.currentTarget.parentNode.parentNode.id;
+            //this gives id of tr whose button was clicked
+            var data =
+                document.getElementById(rowId);
+            //alert(rowId);
+            /*returns array of all elements with 
+            "row-data" class within the row with given id*/
+
+            var line = data.innerHTML;
+            var deleted = line.slice(line.indexOf('>') + 1);
+            var idToDelete = deleted.slice(0, deleted.indexOf('<'));
+
+            remove(ref(db, "Dogs/" + idToDelete))
+                .then(() => {
+                    alert("Data deleted successfully");
+                    window.location.reload();
+                })
+                .catch((error) => {
+                    alert(error);
+                    return;
+                });
+            
+        }
+
+        function ClearData() {
+            //Making the Editboxes visable
+            enterBreed.style = "display:inline;";
+            enterDOB.style = "display:inline;";
+            enterGender.style = "display:inline;";
+            enterHistory.style = "display:inline;";
+            enterIntake.style = "display:inline;";
+            enterName.style = "display:inline;";
+            enterNature.style = "display:inline;";
+            enterSuit.style = "display:inline;";
+
+            //Making the labels invisible
+            lBreed.style = "display:none;";
+            lDOB.style = "display:none;";
+            lGender.style = "display:none;";
+            lHistory.style = "display:none;";
+            lIntake.style = "display:none;";
+            lName.style = "display:none;";
+            lNature.style = "display:none;";
+            lSuit.style = "display:none;";
+
+            enterBreed.value = "";
+            enterDOB.value = "";
+            enterGender.value = "";
+            enterHistory.value = "";
+            enterIntake.value = "";
+            enterName.value = "";
+            enterNature.value = "";
+            enterSuit.value = "";
+            myimg.src = "";
+
+            sDogID = "";
+
+            clearBtn.style = "display:none;";
+            insertBtn.style = "display:inline;";
+            updateBtn.style = "display:none;";
+        }
+        // ------------ Functions that will load data into the |Angels Table| from the Realtime Database
+    </script>
+</body>
+
+</html>
+
+<!--Referance list-->
+<!-- https://www.folkstalk.com/2022/09/javascript-generate-unique-id-with-code-examples.html -->
+<!-- https://www.youtube.com/results?search_query=upload+image+to+firebase+javascript -->

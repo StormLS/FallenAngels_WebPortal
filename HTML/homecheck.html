@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="../CSS/homecheck.css">
+    <!--client-->
+    <ul class="nav">
+        <li><a href="../HTML/loginPage.html" style="color:#FF0066">Logout</a></li>
+        <li><a href="../WebPortal.html">Dogs</a></li>
+        <li><a href="../HTML/UsersPage.html">Users</a></li>
+    </ul>
+    <!--TopPart-->
+    <div id="Fur-AngelInformation" style="border: 2px solid black; text-align: center;">
+        <div class="row" id="FormHeaders">
+            <button id="backBtn" onclick="history.back()">Back</button>
+         
+            <h1>Home Check</h1>
+        </div>
+    <div id="HomeCheck" style="border: 2px solid black; text-align: center;">
+        <br>
+
+        <div class="row">
+            <div class="column">
+                <label class="labels" id="LHomeCheck" >HomeCheck done by</label>
+                <input class="inputBoxes" id="homeCheck" type="text">
+            </div>
+            <!--bool?-->
+            <div class="column">
+                <label class="labels" id="LTimeAndDate" >Time and Date</label>
+                <input class="inputBoxes" id="timeAndDate" type="text">
+            </div>
+            <!--might change-->
+            <div class="column">
+                <label class="labels" id="LHomeType">Type of Home</label>
+                <input class="inputBoxes" id="homeType" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LYardOrGarden" >Yard or Garden</label>
+                <input class="inputBoxes" id="yardOrGarden" type="text">
+            </div>
+            <div class="column">
+                <!--bool?-->
+                <label class="labels" id="LYardorGardSize" >Yard/Garden Size</label>
+                <input class="inputBoxes" id="yardorGardSize" type="text">
+            </div>
+            <div class="column">
+                <label  class="labels" id="LFencedOrWalled">Fenced/Walled</label>
+                <input class="inputBoxes" id="fencedOrWalled" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LOtherPets">Other Pets</label>
+                <input class="inputBoxes" id="otherPets" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LChildren" >Children</label>
+                <input class="inputBoxes" id="children" type="text">
+            </div>
+            <div class="column">
+
+                <label class="labels" id="LPetsStayAlone" >Pets stay alone</label>
+                <input class="inputBoxes" id="petsStayAlone" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LPetSleep">Pet Sleep</label>
+                <input class="inputBoxes" id="petSleep" type="text">
+            </div>
+            <div class="column">
+                <label class="labels" id="LApproval" >Approval</label>
+                <input class="inputBoxes" id="Approval" type="text">
+            </div>
+        </div>
+    </div>
+        
+        <script>
+        </script>
+</body>
+
+<script type="module">
+    window.onload = function() {
+        //alert(localStorage.getItem('userID'));
+    }
+    function BackFunc(){
+        window.location.href='../HTML/UsersPage.html';
+
+    }
+
+</script>
+
+</html>

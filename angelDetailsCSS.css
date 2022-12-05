@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*NAV------------------------------------------------------------------*/
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+}
+
+.nav li {
+    display: inline;
+}
+
+.nav a {
+    display: inline-block;
+    padding: 24px;
+    color: white;
+    text-decoration: none;
+    transition: all 750ms ease;
+}
+
+.nav a:hover {
+    color: #FF0066;
+    background-color: #dcdcdd;
+}
+
+.nav a.active {
+    color: black;
+    background-color: #FF0066;
+}
+
+.square {
+    display: inline-block;
+    height: 12px;
+    width: 2px;
+    background-color: rgb(255, 0, 0);
+}
+
+/*NAV END--------------------------------------------------------------*/
+
+/*DETAILS--------------------------------------------------------------*/
+div {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+div label {
+    width: 100%;
+    margin: auto;
+    display: inline-block;
+}
+
+.drag-area{
+  border: 2px dashed black;
+  height: 500px;
+  width: 700px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drag-area.active{
+  border: 2px solid black;
+}
+.drag-area .icon{
+  font-size: 100px;
+  color: black;
+}
+.drag-area header{
+  font-size: 30px;
+  font-weight: 500;
+  color: black;
+}
+.drag-area span{
+  font-size: 25px;
+  font-weight: 500;
+  color: black;
+  margin: 10px 0 15px 0;
+}
+.drag-area button{
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #3ca9e2;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.drag-area img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+/*DETAILS END--------------------------------------------------------------*/

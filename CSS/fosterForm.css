@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    
+  }
+  /*NAV------------------------------------------------------------------*/
+  .nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+  }
+  
+  .nav li {
+    display: inline;
+  }
+  
+  .nav a {
+    display: inline-block;
+    padding: 24px;
+    color: white;
+    text-decoration: none;
+    transition: all 750ms ease;
+  }
+  
+  .nav a:hover {
+    color: #FF0066;
+    background-color: #dcdcdd;
+  }
+  
+  .nav a.active {
+    color: black;
+    background-color: #FF0066;
+  }
+  
+  .square {
+    display: inline-block;
+    height: 12px;
+    width: 2px;
+    background-color: rgb(255, 0, 0);
+  }
+  
+  /*NAV END--------------------------------------------------------------*/
+ /*All code takes from this CSS ---------------------------------------*/
+body 
+{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*All code takes from this CSS ---------------------------------------*/
+
+/*Grid CSS*/
+.column {
+    float: left;
+    width: 25%;
+    height: 75px; /* Should be removed. Only for demonstration */
+  }
+  .row{
+    padding-right: 20px;
+ 
+
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  #FormHeaders
+  {
+    color:#FF0066;
+    padding: 20px 20px 20px 20px;
+    height: 60px;
+    text-shadow: grey;
+    text-size-adjust: 40px;
+    font-weight: bolder;
+    font-size: larger;
+    
+  }
+  .inputBoxes
+  {
+    float: right;
+  }
+  #logo
+  {
+    float: right;
+    padding-right: 50px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+  #topPart
+  {
+    width: max-content;
+    height: 300px;
+
+  }
+  #backBtn
+  {
+    float: left;
+    width: 150px;
+    border: none;
+    display: block;
+    background-color:black;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 300ms ease;
+    font-size: 16px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+#backBtn:hover {
+    background-color: #2f90c5;
+}
+.labels
+{
+  display: none;
+}
